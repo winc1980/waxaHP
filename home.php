@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <img src="<?php echo get_theme_file_uri('src/activity.jpg'); ?>" alt="images">
+                        <img src="<?php echo get_theme_file_uri('src/activity.jpg'); ?>" alt="images">
                 </div>
             </div>
             
@@ -42,7 +42,18 @@
 
         <!-- 歴史ここから -->
         <section id="history">
-            歴史
+            <div class="container">
+                <div class="row">
+                    <div class="images">
+                        <div><img src="" alt="" /></div>
+                        <div><img src="" alt="" /></div>
+                        <div><img src="" alt="" /></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div> </div>
+                </div>
+            </div>
         </section>
         <!-- 歴史ここまで -->
 

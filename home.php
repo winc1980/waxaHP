@@ -23,7 +23,7 @@
                     <div class="contents">
                         <div class="title">
                             <h2 style="margin:0;">Activity</h2>
-                            活動内容
+                            <p>活動内容</p>
                         </div>
                         <div class="message">
                             <p>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="row">
-                        <img src="<?php echo get_theme_file_uri('src/activity.jpg'); ?>" alt="images">
+                    <img src="<?php echo get_theme_file_uri('src/activity.jpg'); ?>" alt="images">
                 </div>
             </div>
             
@@ -45,13 +45,21 @@
             <div class="container">
                 <div class="row">
                     <div class="images">
-                        <div><img src="" alt="" /></div>
-                        <div><img src="" alt="" /></div>
-                        <div><img src="" alt="" /></div>
+                        <div><img src="<?php echo get_theme_file_uri('src/history-01.png'); ?>" alt="" /></div>
+                        <div><img src="<?php echo get_theme_file_uri('src/history-02.png'); ?>" alt="" /></div>
+                        <div><img src="<?php echo get_theme_file_uri('src/history-03.png'); ?>" alt="" /></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div> </div>
+                    <div class="contents">
+                        <div class="title">
+                            <h2 style="margin:0;">History</h2>
+                            <p>歴史</p>
+                        </div>
+                        <div class="message">
+                            <p>1960年に設立された歴史の長いサークルです。サークルが長野に山小屋を所有、また性能のいい望遠鏡を何本も受け継いできました。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -145,7 +145,83 @@ main {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
-
+place {
+    width: 100%;
+    background-color: black;
+    color: #FFFFFF;
+    padding: 6rem 0;
+}
+#place .container {
+    background-image: url(src/place-bg-sp01.png);
+    background-size: cover;
+    object-fit: contain;
+    padding: 6rem 1.5rem 0 1.5rem;
+}
+#place h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4.3rem;
+    width: 10.1rem;
+    height: 4.3rem;
+    margin-bottom: 0.3rem;
+}
+#place h3 {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    height: 2.3rem;
+    padding-bottom: 3rem;
+    margin: 0;
+}
+#place h3::before {
+    content: "";
+    height: 100%;
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
+    transform: rotate(90deg);
+}
+#place .message p {
+    font-size: 1.4rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4rem;
+    margin: 0;
+}
+#place .place_fields {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+#place .place_boxies {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    width: 19.6rem;
+    height: 4.5rem;
+    line-height: 4.7rem;
+    text-align: center;
+}
+#place .place_box1, .place_box2, .place_box3 {
+    background: #3A5199;
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+#place .place_box1:hover, .place_box2:hover, .place_box3:hover {
+    cursor: pointer;
+}
+#place .place_box1 a, .place_box2 a, .place_box3 a {
+    color: #FFFFFF;
+}
+#place .place_fields p {
+    padding-left: 1rem;
+    margin-top: 0;
+    width: 12.5rem;
+}
+#place .place_map iframe {
+    padding-top: 20rem;
+    min-height: 45rem;
+    width: 100%;
+}
 /*-----------------------------------------------
 お問い合わせ
 -----------------------------------------------*/
@@ -208,7 +284,36 @@ PC表示
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
-
+    #place {
+        padding: 6rem 0;
+    }
+    #place .container {
+        /* display: flex; */
+        max-width: 192rem;
+    }
+    
+    #place .container .row {
+        display: flex;
+        height: 100%;
+    }
+    
+    #place .container .contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5rem 2rem;
+        margin: 0 auto;
+    }
+    #place .place_other_map {
+        width: 46.8rem;
+        height: 41.9rem;
+    }
+    #place .place_map iframe {
+        padding-top: 0;
+        object-fit: contain;
+        height: 42.6rem;
+        width: 56.6rem;
+    }
     /*-----------------------------------------------
     お問い合わせ
     -----------------------------------------------*/

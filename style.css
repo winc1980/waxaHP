@@ -74,19 +74,130 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 70px;
-    background: rgb(180, 177, 177);
+    height: 6rem;
+    background: #000000;
 }
 
+.header_wrapper{
+    display: flex;
+    height: 6rem;
+}
 
-main {
+.header_wrapper img{
+    width: 3.9rem;
+    margin-left: 1.5rem;
+}
+
+.header_wrapper h1{
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-left: 1.1rem;
+    padding-top: 0.6rem;
+}
+
+.header_menu-btn {
+    position:fixed;
+    top: 0;
+    right: 0.4rem;
+    display: flex;
+    height: 6rem;
+    width: 6rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #000000;
+}
+.header_menu-btn span,
+.header_menu-btn span:before,
+.header_menu-btn span:after {
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 2.5rem;
+    border-radius: 0.3rem;
+    background-color: #ffffff;
+    position: absolute;
+}
+.header_menu-btn span:before {
+    bottom: 8px;
+}
+.header_menu-btn span:after {
+    top: 8px;
+}
+
+#header_menu-btn-check:checked ~ .header_menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#header_menu-btn-check:checked ~ .header_menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#header_menu-btn-check:checked ~ .header_menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#header_menu-btn-check {
+    display: none;
+}
+
+.header_menu-content {
     width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #000000;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.header_menu-content ul {
+    display: list-item;
+    list-style: none;
+    padding: 70px 10px 0;
+}
+.header_menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.header_menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.header_menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+#header_menu-btn-check:checked ~ .header_menu-content {
+    left: 0;/*メニューを画面内へ*/
+=======
     background: rgb(0, 0, 0);
 }
 
 /*-----------------------------------------------
 メインビジュアル
 -----------------------------------------------*/
+main {
+    width: 100%;
+    background: rgb(95, 95, 95);
+}
 #mv {
     width: 100%;
     height: calc( 100vh - 70px );

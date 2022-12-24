@@ -41,7 +41,7 @@ img{
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1920px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -58,10 +58,7 @@ img{
     padding-top: 30px;
 }
 
-section {
-    max-width: 1320px;
-    margin: 0 auto;
-}
+
 
 .title h2 {
     font-size: 3.5rem;
@@ -177,8 +174,6 @@ header {
 
 #header_menu-btn-check:checked ~ .header_menu-content {
     top: 6rem;/*メニューを画面内へ*/
-=======
-    background: rgb(0, 0, 0);
 }
 
 /*-----------------------------------------------
@@ -201,15 +196,24 @@ main {
     width: 100%;
     background: rgb(255, 255, 255);
     padding: 40px 0;
+    position: relative;
 }
 
 #activity .container {
+    max-width: 1340px;
+    margin: 0 auto;
     flex-wrap: wrap-reverse;
 }
 
 #activity .contents h2,
 #activity .contents p {
     color: rgb(0, 0, 0);
+}
+
+#activity .contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
 }
 
 /*-----------------------------------------------
@@ -246,17 +250,15 @@ main {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
-place {
+#place {
     width: 100%;
     background-color: black;
     color: #FFFFFF;
-    padding: 6rem 0;
 }
 #place .container {
-    background-image: url(src/place-bg-sp01.png);
+    background-image: url('src/place-bg-sp01.png');
     background-size: cover;
     object-fit: contain;
-    padding: 6rem 1.5rem 0 1.5rem;
 }
 #place h2 {
     font-family: 'Montserrat';
@@ -318,6 +320,10 @@ place {
     margin-top: 0;
     width: 12.5rem;
 }
+#place .place_map {
+    display: flex;
+    align-items: center;
+}
 #place .place_map iframe {
     padding-top: 20rem;
     min-height: 45rem;
@@ -342,7 +348,7 @@ PC表示
     ブロックの基底要素
     -----------------------------------------------*/
     .container {
-        height: 400px;
+        height: 500px;
     }
 
     .container .row {
@@ -377,6 +383,18 @@ PC表示
         object-fit: contain;
         margin-left: auto;
     }
+    #activity .activity__figure {
+        position: absolute;
+        right: 0;
+        max-width: 746px;
+        max-height: 694px;
+    }
+    #activity .activity__figure img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
 
     /*-----------------------------------------------
     歴史
@@ -385,9 +403,6 @@ PC表示
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
-    #place {
-        padding: 6rem 0;
-    }
     #place .container {
         /* display: flex; */
         max-width: 192rem;

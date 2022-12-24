@@ -41,7 +41,7 @@ img{
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1920px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -58,10 +58,7 @@ img{
     padding-top: 30px;
 }
 
-/* section {
-    max-width: 1320px;
-    margin: 0 auto;
-} */
+
 
 .title h2 {
     font-size: 3.5rem;
@@ -187,7 +184,6 @@ header {
 
 #header_menu-btn-check:checked ~ .header_menu-content {
     left: 0;/*メニューを画面内へ*/
-=======
     background: rgb(0, 0, 0);
 }
 
@@ -225,6 +221,11 @@ main {
     color: rgb(0, 0, 0);
 }
 
+#activity .contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
+}
 
 /*-----------------------------------------------
 歴史
@@ -260,17 +261,15 @@ main {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
-place {
+#place {
     width: 100%;
     background-color: black;
     color: #FFFFFF;
-    padding: 6rem 0;
 }
 #place .container {
-    background-image: url(src/place-bg-sp01.png);
+    background-image: url('src/place-bg-sp01.png');
     background-size: cover;
     object-fit: contain;
-    padding: 6rem 1.5rem 0 1.5rem;
 }
 #place h2 {
     font-family: 'Montserrat';
@@ -332,6 +331,10 @@ place {
     margin-top: 0;
     width: 12.5rem;
 }
+#place .place_map {
+    display: flex;
+    align-items: center;
+}
 #place .place_map iframe {
     padding-top: 20rem;
     min-height: 45rem;
@@ -356,7 +359,7 @@ PC表示
     ブロックの基底要素
     -----------------------------------------------*/
     .container {
-        height: 400px;
+        height: 500px;
     }
 
     .container .row {
@@ -411,9 +414,6 @@ PC表示
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
-    #place {
-        padding: 6rem 0;
-    }
     #place .container {
         /* display: flex; */
         max-width: 192rem;

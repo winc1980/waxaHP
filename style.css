@@ -47,7 +47,7 @@ img {
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1920px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -80,7 +80,7 @@ img {
 -----------------------------------------------*/
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 6rem;
@@ -161,11 +161,13 @@ header {
 
 .header_menu-content {
     width: 100%;
-    height: 100%;
-    position: fixed;
+    height: 30rem;
+    position: fixed
     top: 0;
     left: 100%;
-    /*leftの値を変更してメニューを画面外へ*/
+    /*leftの値を変更してメニューを画面外へ*
+    bottom: 6rem;
+    bottom: 100%;/*leftの値を変更してメニューを画面外へ*
     z-index: 80;
     background-color: #000000;
     transition: all 0.5s;
@@ -175,11 +177,11 @@ header {
 .header_menu-content ul {
     display: list-item;
     list-style: none;
-    padding: 70px 10px 0;
+    padding: 0 1rem;
 }
 
 .header_menu-content ul li {
-    border-bottom: solid 1px #ffffff;
+    text-align: center;
     list-style: none;
 }
 
@@ -210,11 +212,14 @@ header {
     left: 0;
     /*メニューを画面内へ*/
     background: rgb(0, 0, 0);
+
+#header_menu-btn-check:checked ~ .header_menu-content {
+    top: 6rem;/*メニューを画面内へ*/
 }
 
 
 /*-----------------------------------------------
-メインビジュアル
+メインビジュア
 -----------------------------------------------*/
 
 main {
@@ -251,6 +256,11 @@ main {
     color: rgb(0, 0, 0);
 }
 
+#activity .contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
+}
 
 /*-----------------------------------------------
 歴史
@@ -389,14 +399,12 @@ main {
     width: 100%;
     background-color: black;
     color: #FFFFFF;
-    padding: 6rem 0;
-}
+
 
 #place .container {
-    background-image: url(src/place-bg-sp01.png);
+    background-image: url('src/place-bg-sp01.png');
     background-size: cover;
     object-fit: contain;
-    padding: 6rem 1.5rem 0 1.5rem;
 }
 
 #place h2 {
@@ -475,9 +483,13 @@ main {
     width: 12.5rem;
 }
 
+#place .place_map {
+    display: flex;
+    align-items: center;
+}
 #place .place_map iframe {
     padding-top: 20rem;
-    min-height: 45rem;
+    min-height: 45rem
     width: 100%;
 }
 
@@ -501,7 +513,7 @@ PC表示
     ブロックの基底要素
     -----------------------------------------------*/
     .container {
-        height: 400px;
+        height: 500px;
     }
     .container .row {
         width: 50%;
@@ -548,9 +560,6 @@ PC表示
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
-    #place {
-        padding: 6rem 0;
-    }
     #place .container {
         /* display: flex; */
         max-width: 192rem;

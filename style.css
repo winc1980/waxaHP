@@ -6,9 +6,12 @@ Version:    1.0.0
 Author:     早稲田大学コンピューター研究会WINC
 */
 
+
 /*----------------------------------------------------------------------------------------------
 SP表示
 ----------------------------------------------------------------------------------------------*/
+
+
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
@@ -19,10 +22,12 @@ body  {
     font-size: 1.6rem;
     margin: 0;
 }
+
 html {
     font-size: 62.5%;
     font-family: 'Noto Sans', serif;
 }
+
 
 p {
     margin: 0;
@@ -32,7 +37,7 @@ p {
     /* background-color: #000000; */
 }
 
-img{
+img {
     width: 100%;
 }
 
@@ -57,14 +62,20 @@ img{
 }
 
 
+/* section {
+    max-width: 1320px;
+    margin: 0 auto;
+} */
 
 .title h2 {
     font-size: 3.5rem;
 }
 
+
 /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
+
 header {
     position: sticky;
     z-index: 100; /* position:relativeを指定する要素よりヘッダーが下にならないようにする */
@@ -74,17 +85,17 @@ header {
     background: #000000;
 }
 
-.header_wrapper{
+.header_wrapper {
     display: flex;
     height: 6rem;
 }
 
-.header_wrapper img{
+.header_wrapper img {
     width: 3.9rem;
     margin-left: 1.5rem;
 }
 
-.header_wrapper h1{
+.header_wrapper h1 {
     font-family: Montserrat;
     font-weight: 500;
     color: #ffffff;
@@ -96,7 +107,7 @@ header {
 }
 
 .header_menu-btn {  
-    position: absolute;
+    position: absolute
     top: 0;
     right: 0;
     display: flex;
@@ -105,6 +116,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 .header_menu-btn span,
 .header_menu-btn span:before,
 .header_menu-btn span:after {
@@ -115,21 +127,26 @@ header {
     background-color: #ffffff;
     position: absolute;
 }
+
 .header_menu-btn span:before {
     bottom: 0.7rem;
 }
+
 .header_menu-btn span:after {
     top: 0.7rem;
 }
 
-#header_menu-btn-check:checked ~ .header_menu-btn span {
-    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+#header_menu-btn-check:checked~.header_menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
 }
-#header_menu-btn-check:checked ~ .header_menu-btn span::before {
+
+#header_menu-btn-check:checked~.header_menu-btn span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
-#header_menu-btn-check:checked ~ .header_menu-btn span::after {
+
+#header_menu-btn-check:checked~.header_menu-btn span::after {
     top: 0;
     transform: rotate(-45deg);
 }
@@ -145,22 +162,25 @@ header {
     bottom: 100%;/*bottomの値を変更してメニューを画面外へ*/
     background-color: #000000;
 }
+
 .header_menu-content ul {
     display: list-item;
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .header_menu-content ul li {
     text-align: center;
     list-style: none;
 }
+
 .header_menu-content ul li label {
     display: block;
     width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: none;
     padding: 9px 15px 10px 0;
     position: relative;
@@ -170,22 +190,27 @@ header {
     top: 6rem;/*メニューを画面内へ。上から6rem*/
 }
 
+
 /*-----------------------------------------------
-メインビジュアル
+メインビジュア
 -----------------------------------------------*/
+
 main {
     width: 100%;
     background: rgb(95, 95, 95);
 }
+
 #mv {
     width: 100%;
-    height: calc( 100vh - 70px );
+    height: calc( 100vh - 70px);
     background: rgb(116, 115, 212);
 }
+
 
 /*-----------------------------------------------
 活動内容
 -----------------------------------------------*/
+
 #activity {
     width: 100%;
     background: rgb(255, 255, 255);
@@ -214,9 +239,10 @@ main {
 /*-----------------------------------------------
 歴史
 -----------------------------------------------*/
-#history{
+
+#history {
     width: 100%;
-    background:rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
     padding: 40px 0;
 }
 
@@ -231,30 +257,130 @@ main {
     grid-gap: 10px;
     margin: 0 auto;
 }
+
 #history .images div {
     width: 180px;
     height: 390px;
     background: rgb(224, 150, 150);
 }
+
 #history .images div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
+/*-----------------------------------------------
+活動風景
+-----------------------------------------------*/
+
+#gallery {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding-top: 16vw;
+    position: relative;
+    margin: auto;
+}
+
+#gallery .gallery_title_h2 {
+    font-size: 4rem;
+}
+
+#gallery .gallery_title {
+    text-align: center;
+}
+
+#gallery .gallery_text {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 13.33vw;
+}
+
+#gallery p span {
+    display: inline-block;
+    border-top: #3A5199 solid 2px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#gallery .gallery_button_pc_only {
+    display: none;
+}
+
+
+/* 全体のスタイル */
+
+.swiper-wrapper {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* 全スライド共通スタイル */
+
+.swiper-slide {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 250px;
+}
+
+
+/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+
+.swiper-slide:nth-child(4n+1) {
+    background-color: #EECB27;
+}
+
+
+/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+
+.swiper-slide:nth-child(4n+2) {
+    background-color: #E13239;
+}
+
+
+/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+
+.swiper-slide:nth-child(4n+3) {
+    background-color: #1F1762;
+}
+
+
+/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
+
+.swiper-slide:nth-child(4n+4) {
+    background-color: #BEDAE5;
+}
+
+
+/* ページネーションのサイズと色 */
+
+.swiper-pagination-bullet {
+    background-color: black;
+    height: 14px;
+    width: 14px;
+}
+
+
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
+
 #place {
     width: 100%;
     background-color: black;
     color: #FFFFFF;
-}
+
+
 #place .container {
     background-image: url('src/place-bg-sp01.png');
     background-size: cover;
     object-fit: contain;
 }
+
 #place h2 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -265,6 +391,7 @@ main {
     height: 4.3rem;
     margin-bottom: 0.3rem;
 }
+
 #place h3 {
     font-family: 'Noto Sans JP';
     font-style: normal;
@@ -272,6 +399,7 @@ main {
     padding-bottom: 3rem;
     margin: 0;
 }
+
 #place h3::before {
     content: "";
     height: 100%;
@@ -279,17 +407,20 @@ main {
     border: 0.23rem solid #3A5199;
     transform: rotate(90deg);
 }
+
 #place .message p {
     font-size: 1.4rem;
     padding-right: 1.5rem;
     padding-bottom: 4rem;
     margin: 0;
 }
+
 #place .place_fields {
     display: flex;
     flex-wrap: wrap;
     font-size: 1.2rem;
 }
+
 #place .place_boxies {
     font-family: 'Montserrat';
     font-style: normal;
@@ -299,39 +430,52 @@ main {
     line-height: 4.7rem;
     text-align: center;
 }
-#place .place_box1, .place_box2, .place_box3 {
+
+#place .place_box1,
+.place_box2,
+.place_box3 {
     background: #3A5199;
     border-radius: 0.5rem;
     margin-bottom: 2.5rem;
 }
-#place .place_box1:hover, .place_box2:hover, .place_box3:hover {
+
+#place .place_box1:hover,
+.place_box2:hover,
+.place_box3:hover {
     cursor: pointer;
 }
-#place .place_box1 a, .place_box2 a, .place_box3 a {
+
+#place .place_box1 a,
+.place_box2 a,
+.place_box3 a {
     color: #FFFFFF;
 }
+
 #place .place_fields p {
     padding-left: 1rem;
     margin-top: 0;
     width: 12.5rem;
 }
+
 #place .place_map {
     display: flex;
     align-items: center;
 }
 #place .place_map iframe {
     padding-top: 20rem;
-    min-height: 45rem;
+    min-height: 45rem
     width: 100%;
 }
+
+
 /*-----------------------------------------------
 お問い合わせ
 -----------------------------------------------*/
 
+
 /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
-
 
 
 /*----------------------------------------------------------------------------------------------
@@ -345,33 +489,27 @@ PC表示
     .container {
         height: 500px;
     }
-
     .container .row {
         width: 50%;
         height: 100%;
     }
-
     .container .contents {
         max-width: 500px;
         padding: 50px 20px;
         margin: 0 auto;
     }
-
     /*-----------------------------------------------
     ヘッダー
     -----------------------------------------------*/
-
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
-
     /*-----------------------------------------------
     活動内容
     -----------------------------------------------*/
     #activity {
         padding: 60px 0;
     }
-
     #activity img {
         display: block;
         height: 100%;
@@ -390,11 +528,9 @@ PC表示
         max-width: 100%;
         max-height: 100%;
     }
-
     /*-----------------------------------------------
     歴史
     -----------------------------------------------*/
-
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
@@ -402,12 +538,10 @@ PC表示
         /* display: flex; */
         max-width: 192rem;
     }
-    
     #place .container .row {
         display: flex;
         height: 100%;
     }
-    
     #place .container .contents {
         display: flex;
         flex-wrap: wrap;
@@ -428,9 +562,7 @@ PC表示
     /*-----------------------------------------------
     お問い合わせ
     -----------------------------------------------*/
-
     /*-----------------------------------------------
     フッター
     -----------------------------------------------*/
-
 }

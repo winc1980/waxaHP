@@ -12,18 +12,16 @@ SP表示
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
-body * {
+body  {
     font-family: 'Noto Sans JP', sans-serif !important;
     box-sizing: border-box;
     text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
 }
 html {
     font-size: 62.5%;
     font-family: 'Noto Sans', serif;
-}
-body {
-    font-size: 1.6rem;
-    margin: 0;
 }
 
 p {
@@ -68,7 +66,8 @@ img{
 ヘッダー
 -----------------------------------------------*/
 header {
-    position: fixed;
+    position: sticky;
+    z-index: 100; /* position:relativeを指定する要素よりヘッダーが下にならないようにする */
     top: 0;
     width: 100%;
     height: 6rem;
@@ -91,21 +90,20 @@ header {
     color: #ffffff;
     font-size: 1.6rem;
     text-align: center;
-    margin-left: 1.1rem;
-    padding-top: 0.6rem;
+    margin-left: 0.9rem;
+    padding-top: 0.7rem;
+    object-fit: contain;
 }
 
-.header_menu-btn {
-    position:fixed;
+.header_menu-btn {  
+    position: absolute;
     top: 0;
-    right: 0.4rem;
+    right: 0;
     display: flex;
     height: 6rem;
-    width: 6rem;
+    width: 5rem;
     justify-content: center;
     align-items: center;
-    z-index: 90;
-    background-color: #000000;
 }
 .header_menu-btn span,
 .header_menu-btn span:before,
@@ -113,16 +111,15 @@ header {
     content: '';
     display: block;
     height: 0.2rem;
-    width: 2.5rem;
-    border-radius: 0.3rem;
+    width: 1.9rem;
     background-color: #ffffff;
     position: absolute;
 }
 .header_menu-btn span:before {
-    bottom: 8px;
+    bottom: 0.7rem;
 }
 .header_menu-btn span:after {
-    top: 8px;
+    top: 0.7rem;
 }
 
 #header_menu-btn-check:checked ~ .header_menu-btn span {
@@ -143,24 +140,22 @@ header {
 
 .header_menu-content {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     position: fixed;
-    bottom: 6rem;
-    bottom: 100%;/*leftの値を変更してメニューを画面外へ*/
-    z-index: 80;
+    bottom: 100%;/*bottomの値を変更してメニューを画面外へ*/
     background-color: #000000;
-    transition: all 0.5s;/*アニメーション設定*/
 }
 .header_menu-content ul {
     display: list-item;
     list-style: none;
-    padding: 0 1rem;
+    padding: 0;
+    margin: 0;
 }
 .header_menu-content ul li {
     text-align: center;
     list-style: none;
 }
-.header_menu-content ul li a {
+.header_menu-content ul li label {
     display: block;
     width: 100%;
     font-size: 15px;
@@ -171,9 +166,8 @@ header {
     position: relative;
 }
 
-
-#header_menu-btn-check:checked ~ .header_menu-content {
-    top: 6rem;/*メニューを画面内へ*/
+#header_menu-btn-check:checked ~ .header_menu-content { /* チェックボックスがついたとき、メニューが画面に表示される。 */
+    top: 6rem;/*メニューを画面内へ。上から6rem*/
 }
 
 /*-----------------------------------------------
@@ -197,6 +191,7 @@ main {
     background: rgb(255, 255, 255);
     padding: 40px 0;
     position: relative;
+    z-index: 50;
 }
 
 #activity .container {

@@ -5,9 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>早稲田大学天文同好会WAXA</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="all" >
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+
 </head>
 
 <body>
@@ -148,14 +149,14 @@
 
             <!-- 活動場所ここから -->
             <section id="place">
-                <div class="container">
-                    <div class="row">
-                        <div class="contents">
+                <div class="place__container">
+                    <div class="place__content">
+                        <div class="place__flex">
                             <div class="place_other_map">
-                                <div class="title">
-                                    <h2 style="margin: 0">Place</h2>
-                                    <h3 style="margin-bottom: 3rem">活動場所</h3>
-                                    <div class="message">
+                                <div class="place__title">
+                                    <h2>Place</h2>
+                                    <h3>活動場所</h3>
+                                    <div class="place__message">
                                         <p>
                                             主な活動場所は学生会館E1108です。活動の詳細についてはTwitterやInstagramをご覧ください。
                                         </p>
@@ -163,71 +164,41 @@
                                 </div>
                                 <div class="place_fields">
                                     <div class="place_boxies">
-                                        <div class="place_box1">
-                                            <a href="https://www.waseda.jp/inst/student/facility/studentcenter">学生会館について</a
-                        >
-                      </div>
-                      <div class="place_box2">
-                        <a
-                          href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf"
-                          >キャンパス間連絡バス</a
-                        >
-                      </div>
-                      <div class="place_box3">
-                        <a
-                          href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm"
-                          >学生会館へのアクセス方法</a
-                        >
-                      </div>
+                                        <div class="place_box place_box1">
                                             <a href="https://www.waseda.jp/inst/student/facility/studentcenter">学生会館について</a> 
                                         </div>
-                                        <div class="place_box2">
+                                        <div class="place_box place_box2">
                                             <a href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf">キャンパス間連絡バス</a>
                                         </div>
-                                        <div class="place_box3">
+                                        <div class="place_box place_box3">
                                             <a href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm">学生会館へのアクセス方法</a>
                                         </div>
                                     </div>
                                     <p>
-                                        ※早稲田大学のHPにリンクが飛びます。
+                                        ※早稲田大学のHPに
+                                        <br class="place__tag--sp">リンクが飛びます。
                                     </p>
                                 </div>
                             </div>
+                            <div class="place_map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25919.536515236803!2d139.7315984135291!3d35.70304328206423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1671290912806!5m2!1sja!2sjp" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="place_map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25919.536515236803!2d139.7315984135291!3d35.70304328206423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1671290912806!5m2!1sja!2sjp" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                    <p>※早稲田大学のHPにリンクが飛びます。</p>
                   </div>
-                </div>
-                <div class="place_map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25919.536515236803!2d139.7315984135291!3d35.70304328206423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1671290912806!5m2!1sja!2sjp"
-                    width="500"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- 活動場所ここまで -->
+            </section>
+            <!-- 活動場所ここまで -->
 
-        <!-- お問い合わせここから -->
-        <section id="contact">ここにコーディングお願いします。</section>
-        <!-- お問い合わせここまで -->
-      </main>
+            <!-- お問い合わせここから -->
+            <section id="contact">
+                ここにコーディングお願いします。
+            </section>
+            <!-- お問い合わせここまで -->
+        </main>
 
-      <!-- フッターここから -->
-      <footer id="footer">ここにコーディングお願いします。</footer>
-      <!-- フッターここまで -->
+        <!-- フッターここから -->
+        <footer id="footer">ここにコーディングお願いします。</footer>
+        <!-- フッターここまで -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>

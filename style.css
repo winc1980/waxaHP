@@ -15,8 +15,9 @@ SP表示
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
-body  {
-    font-family: 'Noto Sans JP', sans-serif !important;
+
+body * {
+    font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     font-size: 1.6rem;
@@ -34,7 +35,7 @@ p {
 }
 
 #page {
-    /* background-color: #000000; */
+    background-color: #000000;
 }
 
 img {
@@ -107,7 +108,7 @@ header {
 }
 
 .header_menu-btn {  
-    position: absolute
+    position: absolute;
     top: 0;
     right: 0;
     display: flex;
@@ -157,9 +158,14 @@ header {
 
 .header_menu-content {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
     position: fixed;
-    bottom: 100%;/*bottomの値を変更してメニューを画面外へ*/
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*
+    bottom: 6rem;
+    bottom: 100%;/*leftの値を変更してメニューを画面外へ*
+    z-index: 80;
     background-color: #000000;
 }
 
@@ -186,8 +192,26 @@ header {
     position: relative;
 }
 
-#header_menu-btn-check:checked ~ .header_menu-content { /* チェックボックスがついたとき、メニューが画面に表示される。 */
-    top: 6rem;/*メニューを画面内へ。上から6rem*/
+.header_menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+#header_menu-btn-check:checked~.header_menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+    background: rgb(0, 0, 0);
+}
+
+#header_menu-btn-check:checked ~ .header_menu-content {
+    top: 6rem;/*メニューを画面内へ*/
 }
 
 
@@ -368,75 +392,75 @@ main {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
-
 #place {
     width: 100%;
-    background-color: black;
+    background-color: #000000;
     color: #FFFFFF;
-
-
-#place .container {
-    background-image: url('src/place-bg-sp01.png');
-    background-size: cover;
-    object-fit: contain;
+    padding: 16vw 0;
+}
+.place__container {
+    background: url(src/place_bg_sp01.png) no-repeat center/cover;
+    padding: 16vw 4vw 16vw 4vw;
 }
 
 #place h2 {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 3.5rem;
-    line-height: 4.3rem;
-    width: 10.1rem;
-    height: 4.3rem;
-    margin-bottom: 0.3rem;
+    font-size: 9.33vw;
+    margin-bottom: 0.8vw;
+    margin-top: 0;
 }
 
 #place h3 {
-    font-family: 'Noto Sans JP';
-    font-style: normal;
-    height: 2.3rem;
-    padding-bottom: 3rem;
-    margin: 0;
+    font-size: 4.2666666667vw;
+    font-weight: 500;
+    margin-bottom: 8vw;
+}
+.place__message {
+    margin-bottom: 10.66vw;
 }
 
 #place h3::before {
     content: "";
-    height: 100%;
-    margin-right: 1.6rem;
-    border: 0.23rem solid #3A5199;
-    transform: rotate(90deg);
+    display: inline-block;
+    width: .8vw;
+    height: 6.13vw;
+    margin-right: 4vw;
+    background-color: #3A5199;
+    position: relative;
+    top: 1.56vw;
 }
-
-#place .message p {
-    font-size: 1.4rem;
-    padding-right: 1.5rem;
-    padding-bottom: 4rem;
+.place__message p {
+    font-size: 3.73vw;
     margin: 0;
 }
 
 #place .place_fields {
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.2rem;
+    justify-content: space-between;
+    font-size: 3.2vw;
 }
 
 #place .place_boxies {
-    font-family: 'Montserrat';
+    display: block;
+    font-family: 'Montserrat', sans-serif;;
     font-style: normal;
     font-weight: 700;
-    width: 19.6rem;
-    height: 4.5rem;
-    line-height: 4.7rem;
+    width: 52.26vw;
+    height: 12vw;
+    line-height: 12vw;
     text-align: center;
+    height: 49.33vw;
+    margin-bottom: 10.6666666667vw;
 }
 
 #place .place_box1,
 .place_box2,
 .place_box3 {
     background: #3A5199;
-    border-radius: 0.5rem;
-    margin-bottom: 2.5rem;
+    border-radius: 1.33vw;
+    margin-bottom: 6.66vw;
 }
 
 #place .place_box1:hover,
@@ -452,9 +476,8 @@ main {
 }
 
 #place .place_fields p {
-    padding-left: 1rem;
     margin-top: 0;
-    width: 12.5rem;
+    width: 33.6vw;
 }
 
 #place .place_map {
@@ -462,9 +485,8 @@ main {
     align-items: center;
 }
 #place .place_map iframe {
-    padding-top: 20rem;
-    min-height: 45rem
-    width: 100%;
+    height: 68.26vw;
+    width: 92vw;
 }
 
 
@@ -534,30 +556,118 @@ PC表示
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/
-    #place .container {
-        /* display: flex; */
-        max-width: 192rem;
+    .place__tag--sp {
+        display: none;
     }
-    #place .container .row {
-        display: flex;
-        height: 100%;
+    #place {
+        width: 100%;
+        color: #FFFFFF;
+        padding: 60px 0;
     }
-    #place .container .contents {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5rem 2rem;
+    .place__container {
+        background: url(src/place_bg_pc01.png) no-repeat center/cover;
+        padding: 60px 0;
+    }
+    .place__content {
+        max-width: 1080px;
         margin: 0 auto;
     }
-    #place .place_other_map {
-        width: 46.8rem;
-        height: 41.9rem;
+    #place .place__title h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 7px;
+        margin-top: 0px;
+    }
+    #place h3 {
+        font-size: 1.6rem;
+        font-family: 'Noto Sans JP';
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .place__message {
+        margin-bottom: 50px;
+    }
+    #place h3::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 23px;
+        margin-right: 15px;
+        background-color: #3A5199;
+        position: relative;
+        top: 5px;
+    }
+    .place__message p {
+        font-size: 1.6rem;
+        margin: 0;
+        line-height: 1.875;
+    }
+    .place__flex {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    .place_other_map {
+        max-width: 458px;
+    }
+    #place .place_fields {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    #place .place_boxies {
+        display: flex;
+        font-family: 'Montserrat', sans-serif;;
+        flex-wrap: wrap;
+        font-style: normal;
+        font-weight: 700;
+        width: auto;
+        height: auto;
+        line-height: 45px;
+        text-align: center;
+        margin-bottom: 50px;
+        justify-content: space-between;
+    }
+    .place_box {
+        flex-shrink: 0;
+        width: 214px;
+    }
+    #place .place_box1, .place_box2, .place_box3 {
+        background: #3A5199;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        transition: .5s all;
+    }
+    .place_box3 {
+        margin-bottom: 0px;
+    }
+    #place .place_box1:hover, .place_box2:hover, .place_box3:hover {
+        cursor: pointer;
+    }
+    #place .place_box1 a, .place_box2 a, .place_box3 a {
+        display: block;
+        width: 214px;
+        color: #FFFFFF;
+    }
+    .place_fields .place_box:hover {
+        transform: scale(1.05);
+        transition: .5s all;
+    }
+    #place .place_fields p {
+        margin-top: 0;
+        width: auto;
+    }
+    #place .place_map {
+        max-width: 566px;
+        max-height: 426px;
+        margin-left: 10px;
     }
     #place .place_map iframe {
-        padding-top: 0;
-        object-fit: contain;
-        height: 42.6rem;
-        width: 56.6rem;
+        max-width: 100%;
+        max-height: 100%;
     }
     /*-----------------------------------------------
     お問い合わせ

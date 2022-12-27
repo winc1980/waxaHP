@@ -16,11 +16,14 @@ SP表示
 ブロックの基底要素
 -----------------------------------------------*/
 
-body * {
+body *{
     font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     font-size: 1.6rem;
+}
+
+body{
     margin: 0;
 }
 
@@ -91,20 +94,31 @@ header {
     height: 6rem;
 }
 
-.header_wrapper img {
-    width: 3.9rem;
-    margin-left: 1.5rem;
+.header_logoandtitle{
+    display: flex;
 }
 
+#header_waxa_logo{
+    width: 3.9rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
 .header_wrapper h1 {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 500;
-    color: #ffffff;
     font-size: 1.6rem;
-    text-align: center;
+    line-height: 2rem;
     margin-left: 0.9rem;
-    padding-top: 0.7rem;
-    object-fit: contain;
+    padding-top: 1rem;
+    color: #FFFFFF;
+}
+
+.header_menu-content-pc{
+    display: none;
 }
 
 .header_menu-btn {  
@@ -160,11 +174,7 @@ header {
     width: 100%;
     height: 30rem;
     position: fixed;
-    top: 0;
-    left: 100%;
-    /*leftの値を変更してメニューを画面外へ*
-    bottom: 6rem;
-    bottom: 100%;/*leftの値を変更してメニューを画面外へ*
+    bottom: 100%;
     z-index: 80;
     background-color: #000000;
 }
@@ -184,24 +194,28 @@ header {
 .header_menu-content ul li label {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 1.5rem;
     box-sizing: border-box;
     color: #ffffff;
     text-decoration: none;
     padding: 9px 15px 10px 0;
     position: relative;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.3rem;
 }
 
 .header_menu-content ul li a::before {
     content: "";
-    width: 7px;
-    height: 7px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-top: solid 0.2rem #ffffff;
+    border-right: solid 0.2rem #ffffff;
     transform: rotate(45deg);
     position: absolute;
-    right: 11px;
-    top: 16px;
+    right: 1.1rem;
+    top: 1.6rem;
 }
 
 #header_menu-btn-check:checked~.header_menu-content {
@@ -523,6 +537,69 @@ PC表示
     /*-----------------------------------------------
     ヘッダー
     -----------------------------------------------*/
+    header{
+        height: 7rem;
+    }
+
+    .header_hamburger-menu{
+        display: none;
+    }
+
+    .header_wrapper{
+        height: 7rem;
+        justify-content:space-between;
+        padding: 0 5%;
+
+    }
+
+    #header_waxa_logo {
+        width: 5.6rem;
+        height: 6.0rem;
+        margin-top: 0.4rem;
+        margin-left: 2rem;
+    }
+
+    .header_wrapper h1{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .header_menu-content-pc{
+        display: block;
+    }
+
+    .header_menu-content-pc ul{
+        display: flex;
+        list-style: none;
+        height: 7rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header_menu-content-pc ul li{
+        margin: 2.3rem 2rem;
+    }    
+
+    .header_menu-content-pc ul li a{
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-family: 'Noto Sans JP';
+        font-style: normal;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    #header_application-btn{
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 1.2rem 2rem;
+        border-radius: 0.5rem;
+        width: 18.9rem;
+        height: 4.5rem;
+        left: 107.3rem;
+        top: 1.3rem;
+    }
+
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/

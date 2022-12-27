@@ -453,6 +453,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+#place .place_fields *{
     font-size: 3.2vw;
 }
 

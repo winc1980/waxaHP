@@ -696,6 +696,10 @@ PC表示
         justify-content: space-between;
         font-size: 14px;
     }
+    #place .place_fields *{
+        font-size: 14px;
+    }
+    
     #place .place_boxies {
         display: flex;
         font-family: 'Montserrat', sans-serif;;

@@ -15,6 +15,11 @@ SP表示
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Noto Sans', serif;
+}
 
 body *{
     font-family: 'Noto Sans JP', sans-serif;
@@ -25,11 +30,6 @@ body *{
 
 body{
     margin: 0;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: 'Noto Sans', serif;
 }
 
 
@@ -80,18 +80,21 @@ img {
 ヘッダー
 -----------------------------------------------*/
 
-header {
+#header {
     position: sticky;
-    z-index: 100; /* position:relativeを指定する要素よりヘッダーが下にならないようにする */
+    z-index: 100;
     top: 0;
     width: 100%;
     height: 6rem;
-    background: #000000;
+    background-color: #000000;
 }
 
 .header_wrapper {
     display: flex;
     height: 6rem;
+    position: sticky;
+    z-index: 90;
+    background-color: #000000;
 }
 
 .header_logoandtitle{
@@ -104,8 +107,6 @@ header {
     margin-top: 1rem;
 }
 
-
-
 .header_wrapper h1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -113,8 +114,12 @@ header {
     font-size: 1.6rem;
     line-height: 2rem;
     margin-left: 0.9rem;
-    padding-top: 1rem;
+    padding-top: 0.9rem;
     color: #FFFFFF;
+}
+
+.header_wrapper span {
+    font-weight: 100;
 }
 
 .header_menu-content-pc{
@@ -123,6 +128,7 @@ header {
 
 .header_menu-btn {  
     position: absolute;
+    z-index: 110;
     top: 0;
     right: 0;
     display: flex;
@@ -172,11 +178,13 @@ header {
 
 .header_menu-content {
     width: 100%;
-    height: 30rem;
-    position: fixed;
+    height: auto;
+    position: absolute;
     bottom: 100%;
     z-index: 80;
     background-color: #000000;
+    transition: all 0.5s;
+    padding-bottom: 1.7rem;
 }
 
 .header_menu-content ul {
@@ -218,19 +226,13 @@ header {
     top: 1.6rem;
 }
 
-#header_menu-btn-check:checked~.header_menu-content {
-    left: 0;
-    /*メニューを画面内へ*/
-    background: rgb(0, 0, 0);
-}
-
 #header_menu-btn-check:checked ~ .header_menu-content {
-    top: 6rem;/*メニューを画面内へ*/
+    bottom: calc(100% - 32.9rem);/*メニューを画面内へ*/
 }
 
 
 /*-----------------------------------------------
-メインビジュア
+メインビジュアル
 -----------------------------------------------*/
 
 main {
@@ -539,7 +541,7 @@ PC表示
     /*-----------------------------------------------
     ヘッダー
     -----------------------------------------------*/
-    header{
+    #header{
         height: 7rem;
     }
     .header_logoandtitle {
@@ -566,14 +568,15 @@ PC表示
     }
 
     .header_wrapper h1{
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2.0rem;
+        line-height: 2.4rem;
         padding-top: 0em;
         margin-top: 0;
         margin-bottom: 0;
     }
     .header_wrapper h1 span {
         font-weight: 500;
+        font-size: 2rem;
     }
 
     .header_menu-content-pc{

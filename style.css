@@ -320,9 +320,13 @@ main {
 #gallery {
     width: 100%;
     background: rgb(255, 255, 255);
-    padding-top: 16vw;
+    padding: 40px 0;
     position: relative;
     margin: auto;
+}
+
+#gallery .gallery_container {
+    margin-bottom: 30px;
 }
 
 #gallery .gallery_title_h2 {
@@ -336,7 +340,6 @@ main {
 #gallery .gallery_text {
     text-align: center;
     font-size: 1.6rem;
-    margin-bottom: 13.33vw;
 }
 
 #gallery p span {
@@ -802,7 +805,4 @@ PC表示
     /*-----------------------------------------------
     フッター
     -----------------------------------------------*/
-}
-
------------------------------------------------*/
 }

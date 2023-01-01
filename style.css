@@ -244,9 +244,13 @@ main {
 #mv {
     width: 100%;
     height: calc( 100vh - 70px);
-    background: rgb(116, 115, 212);
+    background-color: #000000;
+    position: relative;
 }
 
+.mv_wrapper{
+    position: relative;
+}
 
 /*-----------------------------------------------
 活動内容
@@ -320,9 +324,13 @@ main {
 #gallery {
     width: 100%;
     background: rgb(255, 255, 255);
-    padding-top: 16vw;
+    padding: 40px 0;
     position: relative;
     margin: auto;
+}
+
+#gallery .gallery_container {
+    margin-bottom: 30px;
 }
 
 #gallery .gallery_title_h2 {
@@ -336,7 +344,6 @@ main {
 #gallery .gallery_text {
     text-align: center;
     font-size: 1.6rem;
-    margin-bottom: 13.33vw;
 }
 
 #gallery p span {
@@ -568,11 +575,12 @@ PC表示
     .header_hamburger-menu {
         display: none;
     }
+
     .header_wrapper {
-        max-width: 1080px;
+        max-width: calc(1080px + 2rem); 
         height: 7rem;
-        justify-content: space-between;
-        padding: 0;
+        justify-content:space-between;
+        padding: 0 2rem;
         margin: 0 auto;
     }
     #header_waxa_logo {
@@ -633,6 +641,56 @@ PC表示
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
+    .mv_wrapper img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 40;
+    }
+
+    .mv_contents_wrapper{
+        width: 100%;
+        max-width: calc(1080px + 2rem); 
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        padding: 0 2rem;
+        position: absolute;
+        z-index: 50;
+    }
+
+    .mv_contents_wrapper h1{
+        position: relative;
+        height: 14.4rem;
+        width: 100%;
+        left: 0;
+        top: 15rem;
+        font-family:'Noto Serif JP', serif;;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.0rem;
+        line-height: 7.2rem;
+        letter-spacing: 0.11em;
+        color: #FFFFFF;
+    }
+
+    .mv_contents_wrapper a{
+        position: relative;
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 1.1rem 2rem;
+        border-radius: 0.5rem;
+        height: 4.5rem; /* なぜか効かないのでpaddingで調整 */
+        left: 0;
+        top: 15rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-family: 'Noto Sans JP';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
     /*-----------------------------------------------
     活動内容
     -----------------------------------------------*/
@@ -802,7 +860,4 @@ PC表示
     /*-----------------------------------------------
     フッター
     -----------------------------------------------*/
-}
-
------------------------------------------------*/
 }

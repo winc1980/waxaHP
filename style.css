@@ -15,23 +15,23 @@ SP表示
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
     font-family: 'Noto Sans', serif;
 }
 
-body *{
+body * {
     font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     font-size: 1.6rem;
 }
 
-body{
+body {
     margin: 0;
 }
-
 
 p {
     margin: 0;
@@ -97,11 +97,11 @@ img {
     background-color: #000000;
 }
 
-.header_logoandtitle{
+.header_logoandtitle {
     display: flex;
 }
 
-#header_waxa_logo{
+#header_waxa_logo {
     width: 3.9rem;
     margin-left: 1.5rem;
     margin-top: 1rem;
@@ -122,11 +122,11 @@ img {
     font-weight: 100;
 }
 
-.header_menu-content-pc{
+.header_menu-content-pc {
     display: none;
 }
 
-.header_menu-btn {  
+.header_menu-btn {
     position: absolute;
     z-index: 110;
     top: 0;
@@ -226,8 +226,9 @@ img {
     top: 1.6rem;
 }
 
-#header_menu-btn-check:checked ~ .header_menu-content {
-    bottom: calc(100% - 32.9rem);/*メニューを画面内へ*/
+#header_menu-btn-check:checked~.header_menu-content {
+    bottom: calc(100% - 32.9rem);
+    /*メニューを画面内へ*/
 }
 
 
@@ -275,6 +276,7 @@ main {
     margin-right: 1.6rem;
     border: 0.23rem solid #3A5199;
 }
+
 
 /*-----------------------------------------------
 歴史
@@ -370,30 +372,34 @@ main {
 
 /* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
 
-.swiper-slide:nth-child(4n+1) {
+
+/* .swiper-slide:nth-child(4n+1) {
     background-color: #EECB27;
-}
+} */
 
 
 /* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
 
-.swiper-slide:nth-child(4n+2) {
+
+/* .swiper-slide:nth-child(4n+2) {
     background-color: #E13239;
-}
+} */
 
 
 /* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
 
-.swiper-slide:nth-child(4n+3) {
+
+/* .swiper-slide:nth-child(4n+3) {
     background-color: #1F1762;
-}
+} */
 
 
 /* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
 
-.swiper-slide:nth-child(4n+4) {
+
+/* .swiper-slide:nth-child(4n+4) {
     background-color: #BEDAE5;
-}
+} */
 
 
 /* ページネーションのサイズと色 */
@@ -404,16 +410,22 @@ main {
     width: 14px;
 }
 
+.swiper-pagination {
+    position: relative !important;
+}
+
 
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
+
 #place {
     width: 100%;
     background-color: #000000;
     color: #FFFFFF;
     padding: 16vw 0;
 }
+
 .place__container {
     background: url(src/place_bg_sp01.png) no-repeat center/cover;
     padding: 16vw 4vw 16vw 4vw;
@@ -432,6 +444,7 @@ main {
     font-weight: 500;
     margin-bottom: 8vw;
 }
+
 .place__message {
     margin-bottom: 10.66vw;
 }
@@ -446,6 +459,7 @@ main {
     position: relative;
     top: 1.56vw;
 }
+
 .place__message p {
     font-size: 3.73vw;
     margin: 0;
@@ -456,13 +470,15 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#place .place_fields *{
+
+#place .place_fields * {
     font-size: 3.2vw;
 }
 
 #place .place_boxies {
     display: block;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    ;
     font-style: normal;
     font-weight: 700;
     width: 52.26vw;
@@ -502,6 +518,7 @@ main {
     display: flex;
     align-items: center;
 }
+
 #place .place_map iframe {
     height: 68.26vw;
     width: 92vw;
@@ -541,33 +558,30 @@ PC表示
     /*-----------------------------------------------
     ヘッダー
     -----------------------------------------------*/
-    #header{
+    #header {
         height: 7rem;
     }
     .header_logoandtitle {
         display: flex;
         align-items: center;
     }
-    .header_hamburger-menu{
+    .header_hamburger-menu {
         display: none;
     }
-
-    .header_wrapper{
+    .header_wrapper {
         max-width: 1080px;
         height: 7rem;
-        justify-content:space-between;
+        justify-content: space-between;
         padding: 0;
         margin: 0 auto;
     }
-
     #header_waxa_logo {
         width: 5.6rem;
         height: 6.0rem;
         margin-top: 0.4rem;
         margin-left: 0;
     }
-
-    .header_wrapper h1{
+    .header_wrapper h1 {
         font-size: 2.0rem;
         line-height: 2.4rem;
         padding-top: 0em;
@@ -578,30 +592,25 @@ PC表示
         font-weight: 500;
         font-size: 2rem;
     }
-
-    .header_menu-content-pc{
+    .header_menu-content-pc {
         display: block;
     }
-
-    .header_menu-content-pc ul{
+    .header_menu-content-pc ul {
         display: flex;
         list-style: none;
         height: 7rem;
         padding: 0;
         margin: 0;
     }
-
-    .header_menu-content-pc ul li{
+    .header_menu-content-pc ul li {
         display: flex;
         margin: 0 2rem;
         align-items: center;
     }
-    
     .header_menu-content-pc ul li:not(:last-child) {
         max-width: 189px;
     }
-
-    .header_menu-content-pc ul li a{
+    .header_menu-content-pc ul li a {
         display: flex;
         align-items: center;
         text-decoration: none;
@@ -612,8 +621,7 @@ PC表示
         line-height: 1.1;
         color: #FFFFFF;
     }
-
-    #header_application-btn{
+    #header_application-btn {
         background-color: #FFFFFF;
         color: #000000;
         padding: 0rem 2rem;
@@ -622,7 +630,6 @@ PC表示
         left: 107.3rem;
         top: 1.3rem;
     }
-
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
@@ -727,13 +734,13 @@ PC表示
         justify-content: space-between;
         font-size: 14px;
     }
-    #place .place_fields *{
+    #place .place_fields * {
         font-size: 14px;
     }
-    
     #place .place_boxies {
         display: flex;
-        font-family: 'Montserrat', sans-serif;;
+        font-family: 'Montserrat', sans-serif;
+        ;
         flex-wrap: wrap;
         font-style: normal;
         font-weight: 700;
@@ -748,7 +755,9 @@ PC表示
         flex-shrink: 0;
         width: 214px;
     }
-    #place .place_box1, .place_box2, .place_box3 {
+    #place .place_box1,
+    .place_box2,
+    .place_box3 {
         background: #3A5199;
         border-radius: 5px;
         margin-bottom: 40px;
@@ -758,10 +767,14 @@ PC表示
     .place_box3 {
         margin-bottom: 0px;
     }
-    #place .place_box1:hover, .place_box2:hover, .place_box3:hover {
+    #place .place_box1:hover,
+    .place_box2:hover,
+    .place_box3:hover {
         cursor: pointer;
     }
-    #place .place_box1 a, .place_box2 a, .place_box3 a {
+    #place .place_box1 a,
+    .place_box2 a,
+    .place_box3 a {
         display: block;
         width: 214px;
         color: #FFFFFF;
@@ -789,4 +802,7 @@ PC表示
     /*-----------------------------------------------
     フッター
     -----------------------------------------------*/
+}
+
+-----------------------------------------------*/
 }

@@ -243,13 +243,63 @@ main {
 
 #mv {
     width: 100%;
-    height: calc( 100vh - 70px);
+    height: 100vh;
     background-color: #000000;
     position: relative;
 }
 
 .mv_wrapper{
     position: relative;
+}
+
+.mv_sp_img{
+    width: 100%;
+    height: calc(100vh - 10rem);
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+    z-index: 40;
+}
+
+.mv_pc_img{
+    display: none;
+}
+
+.mv_contents_wrapper{
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 35rem;
+    margin: 0;
+    padding: 0 1.4rem;
+    position: absolute;
+    z-index: 50;
+}
+
+.mv_contents_wrapper h1{
+    position: relative;
+    width: 100%;
+    font-family:'Noto Serif JP', serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 5rem;
+    letter-spacing: 0.11em;
+    color: #FFFFFF;
+}
+
+.mv_contents_wrapper a{
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 1.1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
 }
 
 /*-----------------------------------------------
@@ -620,6 +670,7 @@ PC表示
     }
     .header_menu-content-pc ul li a {
         display: flex;
+        height: 100%;
         align-items: center;
         text-decoration: none;
         font-size: 1.6rem;
@@ -641,53 +692,34 @@ PC表示
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
-    .mv_wrapper img{
+    .mv_sp_img{
+        display: none;
+    }
+
+    .mv_pc_img{
+        display: inline;
         width: 100%;
+        height: calc(100vh - 10rem);
+        object-fit: cover;
         position: absolute;
         top: 0;
         z-index: 40;
     }
 
     .mv_contents_wrapper{
-        width: 100%;
         max-width: calc(1080px + 2rem); 
+        top: 26.5rem;
         margin: 0 auto;
-        left: 0;
-        right: 0;
         padding: 0 2rem;
-        position: absolute;
-        z-index: 50;
     }
 
     .mv_contents_wrapper h1{
-        position: relative;
-        height: 14.4rem;
-        width: 100%;
-        left: 0;
-        top: 15rem;
-        font-family:'Noto Serif JP', serif;;
-        font-style: normal;
-        font-weight: 400;
         font-size: 5.0rem;
         line-height: 7.2rem;
-        letter-spacing: 0.11em;
-        color: #FFFFFF;
     }
 
     .mv_contents_wrapper a{
-        position: relative;
-        background-color: #FFFFFF;
-        color: #000000;
-        padding: 1.1rem 2rem;
-        border-radius: 0.5rem;
-        height: 4.5rem; /* なぜか効かないのでpaddingで調整 */
-        left: 0;
-        top: 15rem;
-        text-decoration: none;
         font-size: 1.6rem;
-        font-family: 'Noto Sans JP';
-        font-style: normal;
-        font-weight: 700;
         line-height: 1.1;
     }
 

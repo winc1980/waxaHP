@@ -48,6 +48,7 @@ img {
 .container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     max-width: 1320px;
     margin: 0 auto;
 }
@@ -65,6 +66,12 @@ img {
     padding-top: 30px;
 }
 
+/* 見出しサブテキストの装飾 */
+.contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
+}
 
 /* section {
     max-width: 1320px;
@@ -317,21 +324,12 @@ main {
 #activity .container {
     max-width: 1340px;
     margin: 0 auto;
-    flex-wrap: wrap-reverse;
 }
 
 #activity .contents h2,
 #activity .contents p {
     color: rgb(0, 0, 0);
 }
-
-#activity .contents .title p::before {
-    content: '';
-    margin-right: 1.6rem;
-    border: 0.23rem solid #3A5199;
-}
-
-
 /*-----------------------------------------------
 歴史
 -----------------------------------------------*/
@@ -340,6 +338,10 @@ main {
     width: 100%;
     background: rgb(0, 0, 0);
     padding: 40px 0;
+}
+
+#history .container {
+	flex-wrap: wrap-reverse;
 }
 
 #history .contents h2,

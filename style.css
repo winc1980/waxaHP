@@ -48,6 +48,7 @@ img {
 .container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     max-width: 1320px;
     margin: 0 auto;
 }
@@ -65,6 +66,12 @@ img {
     padding-top: 30px;
 }
 
+/* 見出しサブテキストの装飾 */
+.contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border: 0.23rem solid #3A5199;
+}
 
 /* section {
     max-width: 1320px;
@@ -317,21 +324,12 @@ main {
 #activity .container {
     max-width: 1340px;
     margin: 0 auto;
-    flex-wrap: wrap-reverse;
 }
 
 #activity .contents h2,
 #activity .contents p {
     color: rgb(0, 0, 0);
 }
-
-#activity .contents .title p::before {
-    content: '';
-    margin-right: 1.6rem;
-    border: 0.23rem solid #3A5199;
-}
-
-
 /*-----------------------------------------------
 歴史
 -----------------------------------------------*/
@@ -340,6 +338,10 @@ main {
     width: 100%;
     background: rgb(0, 0, 0);
     padding: 40px 0;
+}
+
+#history .container {
+	flex-wrap: wrap-reverse;
 }
 
 #history .contents h2,
@@ -782,7 +784,7 @@ PC表示
     }
     .header_menu-content-pc ul li {
         display: flex;
-        margin: 0 2rem;
+        margin: 0 1.2rem;
         align-items: center;
     }
     .header_menu-content-pc ul li:not(:last-child) {
@@ -859,13 +861,14 @@ PC表示
         position: absolute;
         right: 0;
         max-width: 746px;
-        max-height: 694px;
+        height: unset;
+        top: 0;
+        padding-top: calc(281px - 12vw);
     }
     #activity .activity__figure img {
         width: auto;
         height: auto;
         max-width: 100%;
-        max-height: 100%;
     }
     /*-----------------------------------------------
     歴史

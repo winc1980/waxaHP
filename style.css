@@ -782,7 +782,7 @@ PC表示
     }
     .header_menu-content-pc ul li {
         display: flex;
-        margin: 0 2rem;
+        margin: 0 1.2rem;
         align-items: center;
     }
     .header_menu-content-pc ul li:not(:last-child) {
@@ -859,13 +859,14 @@ PC表示
         position: absolute;
         right: 0;
         max-width: 746px;
-        max-height: 694px;
+        height: unset;
+        top: 0;
+        padding-top: calc(281px - 12vw);
     }
     #activity .activity__figure img {
         width: auto;
         height: auto;
         max-width: 100%;
-        max-height: 100%;
     }
     /*-----------------------------------------------
     歴史

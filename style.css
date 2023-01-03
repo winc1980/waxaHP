@@ -862,8 +862,10 @@ PC表示
         right: 0;
         max-width: 746px;
         height: unset;
-        top: 0;
-        padding-top: calc(281px - 12vw);
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        /* padding-top: calc(281px - 12vw); */
     }
     #activity .activity__figure img {
         width: auto;

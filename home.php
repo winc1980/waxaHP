@@ -4,7 +4,12 @@
         <!-- メインビジュアルここから -->
         <section id="mv">
             <div class="mv_wrapper">
-                <img src="" alt="main visual">
+                <img src="<?php echo get_theme_file_uri('src/main-visual-sp.png'); ?>" class="mv_sp_img" alt="">
+                <img src="<?php echo get_theme_file_uri('src/main-visual.png'); ?>" class="mv_pc_img" alt="">
+                <div class="mv_contents_wrapper">
+                    <h1>そうだ、<br>星を見に行こう。</h1>
+                    <a href="#contact">本入会はこちら</a>
+                </div>
             </div>
         </section>
         <!-- メインビジュアルここまで -->
@@ -82,7 +87,9 @@
                             get_theme_file_uri('src/slider1.png'),
                             get_theme_file_uri('src/slider2.png'),
                             get_theme_file_uri('src/slider3.png'),
-                            get_theme_file_uri('src/slider2.png')
+                            get_theme_file_uri('src/slider4.png'),
+                            get_theme_file_uri('src/slider5.png'),
+                            get_theme_file_uri('src/slider6.png'),
                         );
                         foreach ( $slide_images as $path ):
                         ?>
@@ -147,8 +154,55 @@
         <!-- 活動場所ここまで -->
 
         <!-- お問い合わせここから -->
-        <section id="contact">
-            ここにコーディングお願いします。
+        <section id="contact" style="background-image:url('<?php echo get_theme_file_uri('src/contact_bg.jpg'); ?>');">
+            <div class="container">
+                <div class="box">
+                    <div class="title">
+                        <h2>Contact</h2>
+                        <p><span>お問い合わせ</span></p>
+                    </div>
+                    <div class="message">
+                        <p>体験・入会は、WAXAの公式Instagramもしくは公式Twitterに、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
+                    </div>
+
+                    <form>
+                        <div class="form_control">
+                            <label>お名前</label>
+                            <div class="badge"><p>必須</p></div>
+                            <input class="input_form" type="text" name="name" placeholder="お名前を入力してください">
+                        </div>
+                        <div class="form_control">
+                            <label>メールアドレス</label>
+                            <div class="badge"><p>必須</p></div>
+                            <input class="input_form" type="email" name="email" placeholder="メールアドレスを入力してください">
+                        </div>
+                        <div class="form_control">
+                            <label>ご要望</label>
+                            <div class="badge"><p>必須</p></div>
+                            <div class="form_check">
+                                <div class="form_check_radio">
+                                    <input type="radio" id="radio1" name="request" value="入会したい">
+                                    <label for="radio1">入会したい</label>
+                                </div>
+                                <div class="form_check_radio">
+                                    <input type="radio" id="radio2" name="request" value="その他">
+                                    <label for="radio2">その他</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_control">
+                            <label style="flex:6;">質問・その他</label>
+                            <textarea class="input_form" name="contents" rows="5" placeholder="質問や気になる点がありましたら、お気軽にお問い合わせください。"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <div class="button">
+                    <div>送信する</div>
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </div>
+            </div>
         </section>
         <!-- お問い合わせここまで -->
     </main>

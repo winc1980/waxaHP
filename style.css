@@ -422,17 +422,12 @@ main {
 .swiper-slide {
     color: #ffffff;
     width: 78.93vw;
-    height: 100%;
-    text-align: center;
-    line-height: 250px;
-}
-
-.swiper-slide {
-    color: #ffffff;
     height: 296px;
     text-align: center;
-    line-height: 250px;
+    line-height: 110px;
 }
+
+
 
 
 /* ページネーションのサイズと色 */
@@ -588,8 +583,114 @@ main {
 /*-----------------------------------------------
 お問い合わせ
 -----------------------------------------------*/
+#contact {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    background-color: rgb(255, 255, 255);
+}
 
+#contact .container {
+    padding: 0;
+}
 
+#contact .box {
+    margin: 0 auto;
+}
+
+#contact .title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#contact .title h2 {
+    margin: 0;
+}
+
+#contact .title p span {
+	display: inline-block;
+    border-top: #3A5199 solid 2px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#contact .message {
+    max-width: 713px;
+    margin: 20px auto;
+    padding: 0 10px 40px 10px;
+}
+
+#contact .message p {
+    max-width: 693px;
+}
+
+/* お問い合わせフォーム */
+form {
+    width: auto;
+    background: rgb(255, 255, 255);
+	border-radius: 20px;
+	box-shadow: 10px 10px 20px rgb(0 0 0 / 25%);
+	padding: 20px;
+	margin: 20px 10px;
+}
+
+.form_control {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.form_control label {
+    margin: 0 20px 10px 0;
+}
+
+.form_control .input_form {
+    line-height: 3.0rem;
+    box-sizing: border-box;
+    border: 0.5px solid rgb(166 166 166);
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.form_control .badge {
+    flex: 3;
+}
+
+.form_control .badge p {
+    width: fit-content;
+	background: #3A5199;
+    color: rgb(255 255 255);
+    border-radius: 3px;
+    padding: 1px 10px;
+}
+
+.form_control .form_check {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+/* ボタン */
+#contact .button {
+    display: flex;
+    width: 170px;
+	background: #3A5199;
+    border-radius: 28px;
+    color: rgb(255 255 255);
+    padding: 15px 9px 15px 49px;
+	margin: 0 auto;
+}
+
+#contact .button div {
+	font-size: 18px;
+}
+
+#contact .button span {
+	margin-left: auto;
+}
 /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
@@ -620,7 +721,7 @@ PC表示
     ブロックの基底要素
     -----------------------------------------------*/
     .container {
-        height: 500px;
+        padding: 50px 0;
     }
     .container .row {
         width: 50%;
@@ -774,10 +875,9 @@ PC表示
     -----------------------------------------------*/
     .swiper-slide {
         color: #ffffff;
-        width: 414px;
+        width: 653px;
         height: 100%;
         text-align: center;
-        line-height: 250px;
     }
     /*-----------------------------------------------
     活動場所
@@ -907,5 +1007,25 @@ PC表示
     }
     /*-----------------------------------------------
     お問い合わせ
+    -----------------------------------------------*/
+    form {
+        max-width: 1000px;
+        width: 95vw;
+        padding: 40px;
+    }
+    .form_control {
+        justify-content: space-between;
+    }
+    .form_control label {
+        flex: 3;
+    }
+    .form_control .input_form {
+        flex: 6;
+    }
+    .form_control .form_check {
+        flex: 6;
+    }
+    /*-----------------------------------------------
+    フッター
     -----------------------------------------------*/
 }

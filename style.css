@@ -491,34 +491,25 @@ main {
 #place h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 9.33vw;
+    font-size: 3.5rem;
     margin-bottom: 0.8vw;
     margin-top: 0;
 }
 
 #place h3 {
-    font-size: 4.2666666667vw;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 8vw;
+    border-left: #3A5199 solid .8vw;
+    padding-left: 3.73vw;
 }
 
 .place__message {
     margin-bottom: 10.66vw;
 }
 
-#place h3::before {
-    content: "";
-    display: inline-block;
-    width: .8vw;
-    height: 6.13vw;
-    margin-right: 4vw;
-    background-color: #3A5199;
-    position: relative;
-    top: 1.56vw;
-}
-
 .place__message p {
-    font-size: 3.73vw;
+    font-size: 1.4rem;
     margin: 0;
 }
 
@@ -529,29 +520,32 @@ main {
 }
 
 #place .place_fields * {
-    font-size: 3.2vw;
+    font-size: 1.2rem;
 }
 
 #place .place_boxies {
-    display: block;
     font-family: 'Montserrat', sans-serif;
-    ;
     font-style: normal;
     font-weight: 700;
     width: 52.26vw;
-    height: 12vw;
-    line-height: 12vw;
     text-align: center;
-    height: 49.33vw;
     margin-bottom: 10.6666666667vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#place .place_box1,
-.place_box2,
-.place_box3 {
+#place .place_box1 a,
+.place_box2 a,
+.place_box3 a {
+    display: flex;
+    width: 196px;
+    height: 45px;
     background: #3A5199;
     border-radius: 1.33vw;
     margin-bottom: 6.66vw;
+    align-items: center;
+    justify-content: center;
 }
 
 #place .place_box1:hover,
@@ -915,12 +909,14 @@ PC表示
         font-family: 'Noto Sans JP';
         font-weight: 500;
         margin-bottom: 30px;
+        border-left: #3A5199 solid 2px;
+        padding-left: 14px;
     }
     .place__message {
         margin-bottom: 50px;
     }
     #place h3::before {
-        content: "";
+        content: none;
         display: inline-block;
         width: 2px;
         height: 23px;
@@ -969,9 +965,16 @@ PC表示
         flex-shrink: 0;
         width: 214px;
     }
-    #place .place_box1,
-    .place_box2,
-    .place_box3 {
+    #place .place_box1 ,
+    .place_box2 ,
+    .place_box3  {
+        margin-right: 10px;
+        transition: .5s all;
+    }
+    #place .place_box1 a,
+    .place_box2 a,
+    .place_box3 a {
+        flex-shrink: 0;
         background: #3A5199;
         border-radius: 5px;
         margin-bottom: 40px;

@@ -1,14 +1,15 @@
 let vw = 0.04266666667 * window.innerWidth;
 var mySwiper = new Swiper('.swiper-container', {
     centeredSlides: true,
+    slidesPerView: 5,
     loop: true,
     autoHeight: true,
     spaceBetween: 10,
     centeredSlides: true,
-    slidesPerView: 'auto',
     breakpoints: {
         767: {
             spaceBetween: vw,
+            slidesPerView: 1,
         }
     },
     autoplay: {

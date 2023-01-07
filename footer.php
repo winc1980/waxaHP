@@ -1,5 +1,16 @@
         <!-- フッターここから -->
-        <footer id="footer">ここにコーディングお願いします。</footer>
+        <footer id="footer">
+            <div class="footer_wrapper">
+                <p>&copy;
+                    <script type="text/javascript">
+                        myDate = new Date();
+                        myYear = myDate.getFullYear();
+                        document.write(myYear);
+                    </script>
+                    Copyright: 天文同好会WAXA
+                </p>
+            </div>
+        </footer>
         <!-- フッターここまで -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>

@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
 
+    <style>
+        #place {
+            background: url(src/place_bg_sp01.png) no-repeat center/cover;
+        }
+        @media screen and (min-width: 768px) {
+            #place {
+                background: url(src/place_bg_pc01.png) no-repeat center/cover;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -199,26 +209,24 @@
                 <div class="place__container">
                     <div class="place__content">
                         <div class="place__flex">
-                            <div class="place_other_map">
-                                <div class="place__title">
+                            <div class="contents">
+                                <div class="title">
                                     <h2>Place</h2>
-                                    <h3>活動場所</h3>
-                                    <div class="place__message">
-                                        <p>
-                                            主な活動場所は学生会館E1108です。活動の詳細についてはTwitterやInstagramをご覧ください。
-                                        </p>
-                                    </div>
+                                    <p>活動場所</p>
+                                </div>
+                                <div class="message">
+                                    <p>主な活動場所は学生会館E1108です。活動の詳細についてはTwitterやInstagramをご覧ください。</p>
                                 </div>
                                 <div class="place_fields">
                                     <div class="place_boxies">
                                         <div class="place_box place_box1">
-                                            <a href="https://www.waseda.jp/inst/student/facility/studentcenter" target="_blank">学生会館について</a>
+                                            <a href="https://www.waseda.jp/inst/student/facility/studentcenter">学生会館について</a>
                                         </div>
                                         <div class="place_box place_box2">
-                                            <a href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf" target="_blank">キャンパス間連絡バス</a>
+                                            <a href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf">キャンパス間連絡バス</a>
                                         </div>
                                         <div class="place_box place_box3">
-                                            <a href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm" target="_blank">学生会館へのアクセス方法</a>
+                                            <a href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm">学生会館へのアクセス方法</a>
                                         </div>
                                     </div>
                                     <p>
@@ -246,21 +254,21 @@
                             <p><span>お問い合わせ</span></p>
                         </div>
                         <div class="message">
-                            <p>体験・入会は、WAXAの公式Instagramもしくは公式Twitterに、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
+                            <p>体験・入会は、WAXAの公式<a href="#">Instagram</a>もしくは公式<a href="#">Twitter</a>に、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
                         </div>
     
                         <form>
-                            <div class="form_control">
+                            <div class="form_control" style="margin-bottom:30px;">
                                 <label>お名前</label>
                                 <div class="badge"><p>必須</p></div>
                                 <input class="input_form" type="text" name="name" placeholder="お名前を入力してください">
                             </div>
-                            <div class="form_control">
+                            <div class="form_control" style="margin-bottom:30px;">
                                 <label>メールアドレス</label>
                                 <div class="badge"><p>必須</p></div>
                                 <input class="input_form" type="email" name="email" placeholder="メールアドレスを入力してください">
                             </div>
-                            <div class="form_control">
+                            <div class="form_control" style="margin-bottom:30px;">
                                 <label>ご要望</label>
                                 <div class="badge"><p>必須</p></div>
                                 <div class="form_check">
@@ -269,8 +277,12 @@
                                         <label for="radio1">入会したい</label>
                                     </div>
                                     <div class="form_check_radio">
-                                        <input type="radio" id="radio2" name="request" value="その他">
-                                        <label for="radio2">その他</label>
+                                        <input type="radio" id="radio2" name="request" value="体験したい">
+                                        <label for="radio2">体験したい</label>
+                                    </div>
+                                    <div class="form_check_radio">
+                                        <input type="radio" id="radio3" name="request" value="その他">
+                                        <label for="radio3">その他</label>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +306,7 @@
         <!-- フッターここから -->
         <footer id="footer">
             <div class="footer_wrapper">
-                <p>©︎
+                <p>&copy;
                     <script type="text/javascript">
                         myDate = new Date();
                         myYear = myDate.getFullYear();

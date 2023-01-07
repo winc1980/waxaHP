@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="contents">
                         <div class="title">
-                            <h2 style="margin: 0">Activity</h2>
+                            <h2>Activity</h2>
                             <p>活動内容</p>
                         </div>
                         <div class="message">
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="contents">
                         <div class="title">
-                            <h2 style="margin: 0">History</h2>
+                            <h2>History</h2>
                             <p>歴史</p>
                         </div>
                         <div class="message">
@@ -68,7 +68,7 @@
         <section id="gallery">
             <div class="gallery_container">
                 <div class="gallery_title">
-                    <h2 style="margin: 0" class="gallery_title_h2">Gallery</h2>
+                    <h2 class="gallery_title_h2">Gallery</h2>
                 </div>
 
                 <div class="gallery_text">
@@ -115,15 +115,13 @@
             <div class="place__container">
                 <div class="place__content">
                     <div class="place__flex">
-                        <div class="place_other_map">
-                            <div class="place__title">
+                        <div class="contents">
+                            <div class="title">
                                 <h2>Place</h2>
-                                <h3>活動場所</h3>
-                                <div class="place__message">
-                                    <p>
-                                        主な活動場所は学生会館E1108です。活動の詳細についてはTwitterやInstagramをご覧ください。
-                                    </p>
-                                </div>
+                                <p>活動場所</p>
+                            </div>
+                            <div class="message">
+                                <p>主な活動場所は学生会館E1108です。活動の詳細についてはTwitterやInstagramをご覧ください。</p>
                             </div>
                             <div class="place_fields">
                                 <div class="place_boxies">
@@ -162,21 +160,21 @@
                         <p><span>お問い合わせ</span></p>
                     </div>
                     <div class="message">
-                        <p>体験・入会は、WAXAの公式Instagramもしくは公式Twitterに、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
+                        <p>体験・入会は、WAXAの公式<a href="#">Instagram</a>もしくは公式<a href="#">Twitter</a>に、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
                     </div>
 
                     <form>
-                        <div class="form_control">
+                        <div class="form_control" style="margin-bottom:30px;">
                             <label>お名前</label>
                             <div class="badge"><p>必須</p></div>
                             <input class="input_form" type="text" name="name" placeholder="お名前を入力してください">
                         </div>
-                        <div class="form_control">
+                        <div class="form_control" style="margin-bottom:30px;">
                             <label>メールアドレス</label>
                             <div class="badge"><p>必須</p></div>
                             <input class="input_form" type="email" name="email" placeholder="メールアドレスを入力してください">
                         </div>
-                        <div class="form_control">
+                        <div class="form_control" style="margin-bottom:30px;">
                             <label>ご要望</label>
                             <div class="badge"><p>必須</p></div>
                             <div class="form_check">
@@ -185,8 +183,12 @@
                                     <label for="radio1">入会したい</label>
                                 </div>
                                 <div class="form_check_radio">
-                                    <input type="radio" id="radio2" name="request" value="その他">
-                                    <label for="radio2">その他</label>
+                                    <input type="radio" id="radio2" name="request" value="体験したい">
+                                    <label for="radio2">体験したい</label>
+                                </div>
+                                <div class="form_check_radio">
+                                    <input type="radio" id="radio3" name="request" value="その他">
+                                    <label for="radio3">その他</label>
                                 </div>
                             </div>
                         </div>

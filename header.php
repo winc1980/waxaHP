@@ -17,6 +17,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all">
         <?php wp_head(); ?>
+
+        <style>
+            #place {
+                background: url(<?php echo get_theme_file_uri('src/place_bg_sp01.png'); ?>) no-repeat center/cover;
+            }
+            @media screen and (min-width: 768px) {
+                #place {
+                    background: url(<?php echo get_theme_file_uri('src/place_bg_pc01.png'); ?>) no-repeat center/cover;
+                }
+            }
+        </style>
     </head>
 
     <body>

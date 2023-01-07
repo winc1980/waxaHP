@@ -63,14 +63,20 @@ img {
 }
 
 .message {
-    padding-top: 30px;
+    padding-top: 60px;
+    margin-bottom: 30px;
 }
 
-/* 見出しサブテキストの装飾 */
+.message p {
+    line-height: 30px;
+}
+
+/* 見出しサブタイトルの装飾 */
 .contents .title p::before {
     content: '';
     margin-right: 1.6rem;
-    border: 0.23rem solid #3A5199;
+    border-right: 3px solid #3A5199;
+    background: #3A5199;
 }
 
 /* section {
@@ -79,9 +85,15 @@ img {
 } */
 
 .title h2 {
+    font-family: 'Montserrat';
     font-size: 3.5rem;
+    margin: 0 0 7px 0;
 }
 
+.title p {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
 
 /*-----------------------------------------------
 ヘッダー
@@ -316,7 +328,7 @@ main {
 #activity {
     width: 100%;
     background: rgb(255, 255, 255);
-    padding: 40px 0;
+    padding: 60px 0;
     position: relative;
     z-index: 50;
 }
@@ -337,7 +349,7 @@ main {
 #history {
     width: 100%;
     background: rgb(0, 0, 0);
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 #history .container {
@@ -376,7 +388,7 @@ main {
 #gallery {
     width: 100%;
     background: rgb(255, 255, 255);
-    padding: 40px 0;
+    padding: 60px 0;
     position: relative;
     margin: auto;
 }
@@ -388,6 +400,7 @@ main {
 #gallery .gallery_title_h2 {
     font-size: 3.5rem;
     font-family: 'Montserrat';
+    margin: 0;
 }
 
 #gallery .gallery_title {
@@ -484,8 +497,7 @@ main {
 }
 
 .place__container {
-    background: url(src/place_bg_sp01.png) no-repeat center/cover;
-    padding: 16vw 4vw 16vw 4vw;
+    padding: 0 4vw 0 4vw;
 }
 
 #place h2 {
@@ -500,12 +512,12 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 8vw;
-    border-left: #3A5199 solid .8vw;
     padding-left: 3.73vw;
 }
 
-.place__message {
-    margin-bottom: 10.66vw;
+#place .message {
+	padding-top: 30px;
+	margin-bottom: 50px;
 }
 
 .place__message p {
@@ -622,13 +634,23 @@ main {
     max-width: 693px;
 }
 
+#contact .message a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    transition: .3s;
+}
+
+#contact .message a:hover {
+    color: rgb(139, 139, 139);
+}
+
 /* お問い合わせフォーム */
 form {
     width: auto;
     background: rgb(255, 255, 255);
 	border-radius: 20px;
-	box-shadow: 10px 10px 20px rgb(0 0 0 / 25%);
-	padding: 20px;
+	box-shadow: 10px 10px 10px rgb(0 0 0 / 25%);
+	padding: 40px 25px;
 	margin: 20px 10px;
 }
 
@@ -636,7 +658,6 @@ form {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-    margin: 15px 0;
 }
 
 .form_control label {
@@ -644,11 +665,11 @@ form {
 }
 
 .form_control .input_form {
-    line-height: 3.0rem;
+    line-height: 2.9rem;
     box-sizing: border-box;
     border: 0.5px solid rgb(166 166 166);
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 15px;
     width: 100%;
 }
 
@@ -666,18 +687,30 @@ form {
 
 .form_control .form_check {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    column-gap: 30px;
     width: 100%;
 }
+
+.form_check_radio {
+    margin-bottom: 10px;
+}
+
 /* ボタン */
 #contact .button {
     display: flex;
     width: 170px;
-	background: #3A5199;
+	background: rgb(58, 81, 153);
     border-radius: 28px;
     color: rgb(255 255 255);
+    cursor: pointer;
     padding: 15px 9px 15px 49px;
 	margin: 0 auto;
+    transition: .3s;
+}
+
+#contact .button:hover {
+    background: rgb(92, 119, 199);
 }
 
 #contact .button div {
@@ -716,9 +749,6 @@ PC表示
     /*-----------------------------------------------
     ブロックの基底要素
     -----------------------------------------------*/
-    .container {
-        padding: 50px 0;
-    }
     .container .row {
         width: 50%;
         height: 100%;
@@ -842,9 +872,6 @@ PC表示
     /*-----------------------------------------------
     活動内容
     -----------------------------------------------*/
-    #activity {
-        padding: 60px 0;
-    }
     #activity img {
         display: block;
         height: 100%;
@@ -889,10 +916,6 @@ PC表示
         color: #FFFFFF;
         padding: 60px 0;
     }
-    .place__container {
-        background: url(src/place_bg_pc01.png) no-repeat center/cover;
-        padding: 60px 0;
-    }
     .place__content {
         max-width: 1080px;
         margin: 0 auto;
@@ -909,7 +932,6 @@ PC表示
         font-family: 'Noto Sans JP';
         font-weight: 500;
         margin-bottom: 30px;
-        border-left: #3A5199 solid 2px;
         padding-left: 14px;
     }
     .place__message {
@@ -934,9 +956,7 @@ PC表示
         display: flex;
         justify-content: space-between;
         margin: 0 10px;
-    }
-    .place_other_map {
-        max-width: 458px;
+        gap: 20px;
     }
     #place .place_fields {
         display: block;
@@ -1020,6 +1040,7 @@ PC表示
         max-width: 1000px;
         width: 95vw;
         padding: 40px;
+        box-shadow: 10px 10px 20px rgb(0 0 0 / 25%)
     }
     .form_control {
         justify-content: space-between;
@@ -1029,6 +1050,7 @@ PC表示
     }
     .form_control .input_form {
         flex: 6;
+        line-height: 3.9rem;
     }
     .form_control .form_check {
         flex: 6;

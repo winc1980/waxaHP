@@ -24,9 +24,7 @@
                             <p>活動内容</p>
                         </div>
                         <div class="message">
-                            <p>
-                                天文同好会は星空を見るのが好きな人が集まるサークルです。月に数度、長野にある山小屋に星を見に行きます。普段はカメラ班、星座班、望遠鏡班に別れて活動したり全体で遊んだりしてます。天文に詳しい人もたくさんいますがそれ以上に、詳しくないが星を見たい人、仲間とわいわいしたい人もたくさんいるので気軽にsns等に連絡ください。
-                            </p>
+                            <p><?php echo get_post_meta( 1, 'activity_text', true ); ?></p>
                         </div>
                     </div>
                 </div>
@@ -54,9 +52,7 @@
                             <p>歴史</p>
                         </div>
                         <div class="message">
-                            <p>
-                                1960年に設立された歴史の長いサークルです。サークルが長野に山小屋を所有、また性能のいい望遠鏡を何本も受け継いできました。
-                            </p>
+                            <p><?php echo get_post_meta( 1, 'history_text', true ); ?></p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +156,7 @@
                         <p><span>お問い合わせ</span></p>
                     </div>
                     <div class="message">
-                        <p>体験・入会は、WAXAの公式<a href="#">Instagram</a>もしくは公式<a href="#">Twitter</a>に、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
+                        <p>体験・入会は、WAXAの公式<a href="<?php echo 'https://www.instagram.com/' . get_post_meta( 1, 'instagram_id', true ); ?>">Instagram</a>もしくは公式<a href="<?php echo 'https://twitter.com/' . get_post_meta( 1, 'twitter_id', true ); ?>">Twitter</a>に、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
                     </div>
 
                     <form>

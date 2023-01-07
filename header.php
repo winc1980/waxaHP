@@ -56,10 +56,10 @@
                             <a href="#place">活動場所</a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/waxa_tenmon/"><img src="<?php echo get_theme_file_uri('src/instagram-logo.svg'); ?>" alt="instagram link"></a>
+                            <a href="<?php echo 'https://www.instagram.com/' . get_post_meta( 1, 'instagram_id', true ); ?>"><img src="<?php echo get_theme_file_uri('src/instagram-logo.svg'); ?>" alt="instagram link"></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/waxa_souten"><img src="<?php echo get_theme_file_uri('src/twitter-logo.svg'); ?>" alt="Twitter link"></a>
+                            <a href="<?php echo 'https://twitter.com/' . get_post_meta( 1, 'twitter_id', true ); ?>"><img src="<?php echo get_theme_file_uri('src/twitter-logo.svg'); ?>" alt="Twitter link"></a>
                         </li>
                         <li>
                             <a href="#contact" id="header_application-btn">本入会はこちら</a>

@@ -16,6 +16,7 @@
     <!-- Swiper.js 4.3.3 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="assets/animate.min.css" media="all">
 
     <style>
         #place {
@@ -61,7 +62,7 @@
                             <a href="https://twitter.com/waxa_souten"><img src="src/twitter-logo.svg" alt="Twitter link"></a>
                         </li>
                         <li>
-                            <a href="#contact" id="header_application-btn">本入会はこちら</a>
+                            <a href="#contact" id="header_application-btn">入会はこちら</a>
                         </li>
                     </ul>
                 </div>
@@ -106,7 +107,7 @@
                     <img src="src/main-visual.png" class="mv_pc_img" alt="">
                     <div class="mv_contents_wrapper">
                         <h1>そうだ、<br>星を見に行こう。</h1>
-                        <a href="#contact">本入会はこちら</a>
+                        <a href="#contact">入会はこちら</a>
                     </div>
 
                 </div>
@@ -118,18 +119,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="contents">
-                            <div class="title">
+                            <div class="title fade">
                                 <h2 style="margin: 0">Activity</h2>
                                 <p>活動内容</p>
                             </div>
-                            <div class="message">
+                            <div class="message fade">
                                 <p>
                                     天文同好会は星空を見るのが好きな人が集まるサークルです。月に数度、長野にある山小屋に星を見に行きます。普段はカメラ班、星座班、望遠鏡班に分かれて活動したり全体で遊んだりしてます。天文に詳しい人もたくさんいますがそれ以上に、詳しくないが星を見たい人、仲間とわいわいしたい人もたくさんいるので気軽にsns等に連絡ください。
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="activity__figure row">
+                    <div class="activity__figure row fade">
                         <img src="src/activity.jpg" alt="images" />
                     </div>
                 </div>
@@ -139,7 +140,7 @@
             <!-- 歴史ここから -->
             <section id="history">
                 <div class="container">
-                    <div class="row">
+                    <div class="row fade">
                         <div class="images">
                             <div><img src="src/history-01.png" alt="" /></div>
                             <div><img src="src/history-02.png" alt="" /></div>
@@ -148,11 +149,11 @@
                     </div>
                     <div class="row">
                         <div class="contents">
-                            <div class="title">
+                            <div class="title fade">
                                 <h2 style="margin: 0">History</h2>
                                 <p>歴史</p>
                             </div>
-                            <div class="message">
+                            <div class="message fade">
                                 <p>
                                     1960年に設立された歴史の長いサークルです。サークルが長野に山小屋を所有、また性能のいい望遠鏡を何本も受け継いできました。
                                 </p>
@@ -165,7 +166,7 @@
 
             <!-- 活動風景ここから -->
             <section id="gallery">
-                <div class="gallery_container">
+                <div class="gallery_container fade">
                     <div class="gallery_title">
                         <h2 style="margin: 0" class="gallery_title_h2">Gallery</h2>
                     </div>
@@ -175,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-parent">
+                <div class="swiper-parent fade">
                     <!-- Swiper START -->
                     <div class="swiper-container">
                         <!-- メイン表示部分 -->
@@ -277,12 +278,8 @@
                                         <label for="radio1">入会したい</label>
                                     </div>
                                     <div class="form_check_radio">
-                                        <input type="radio" id="radio2" name="request" value="体験したい">
-                                        <label for="radio2">体験したい</label>
-                                    </div>
-                                    <div class="form_check_radio">
-                                        <input type="radio" id="radio3" name="request" value="その他">
-                                        <label for="radio3">その他</label>
+                                        <input type="radio" id="radio2" name="request" value="その他">
+                                        <label for="radio3">その他（ご質問等）</label>
                                     </div>
                                 </div>
                             </div>
@@ -318,6 +315,8 @@
         </footer>
         <!-- フッターここまで -->
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>

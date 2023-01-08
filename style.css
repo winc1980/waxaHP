@@ -95,6 +95,15 @@ img {
     font-size: 1.6rem;
 }
 
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1s;
+}.fade.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
@@ -542,7 +551,7 @@ main {
     width: 52.26vw;
     text-align: center;
     margin-bottom: 10.6666666667vw;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -649,7 +658,7 @@ form {
     width: auto;
     background: rgb(255, 255, 255);
 	border-radius: 20px;
-	box-shadow: 10px 10px 10px rgb(0 0 0 / 25%);
+	box-shadow: 0 0 10px rgb(0 0 0 / 16%);
 	padding: 40px 25px;
 	margin: 20px 10px;
 }
@@ -969,8 +978,7 @@ PC表示
     }
     #place .place_boxies {
         display: flex;
-        font-family: 'Montserrat', sans-serif;
-        ;
+        font-family: 'Montserrat', sans-serif;;
         flex-wrap: wrap;
         font-style: normal;
         font-weight: 700;
@@ -1040,7 +1048,7 @@ PC表示
         max-width: 1000px;
         width: 95vw;
         padding: 40px;
-        box-shadow: 10px 10px 20px rgb(0 0 0 / 25%)
+        box-shadow: 0px 0px 20px rgb(0 0 0 / 16%)
     }
     .form_control {
         justify-content: space-between;

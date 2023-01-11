@@ -930,7 +930,7 @@ PC表示
         height: 100%;
         text-align: center;
     }
-    #gallery.gallery_button_pc_only {
+    #gallery .gallery_button_pc_only {
         display: block;
     }
     /*-----------------------------------------------

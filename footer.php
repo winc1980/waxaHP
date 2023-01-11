@@ -7,7 +7,7 @@
                         myYear = myDate.getFullYear();
                         document.write(myYear);
                     </script>
-                    Copyright: 天文同好会WAXA
+                    &copy;: 天文同好会WAXA
                 </p>
             </div>
         </footer>

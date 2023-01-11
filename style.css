@@ -71,13 +71,16 @@ img {
     line-height: 30px;
 }
 
+
 /* 見出しサブタイトルの装飾 */
+
 .contents .title p::before {
     content: '';
     margin-right: 1.6rem;
     border-right: 3px solid #3A5199;
     background: #3A5199;
 }
+
 
 /* section {
     max-width: 1320px;
@@ -99,10 +102,13 @@ img {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1.5s, transform 1s;
-}.fade.active {
+}
+
+.fade.active {
     opacity: 1;
     transform: translateY(0px);
 }
+
 
 /*-----------------------------------------------
 ヘッダー
@@ -276,24 +282,24 @@ main {
     position: relative;
 }
 
-.mv_wrapper{
+.mv_wrapper {
     position: relative;
 }
 
-.mv_sp_img{
+.mv_sp_img {
     width: 100%;
     height: calc(100vh - 10rem);
-    object-fit:cover;
+    object-fit: cover;
     position: absolute;
     top: 0;
     z-index: 40;
 }
 
-.mv_pc_img{
+.mv_pc_img {
     display: none;
 }
 
-.mv_contents_wrapper{
+.mv_contents_wrapper {
     width: 100%;
     left: 0;
     right: 0;
@@ -304,10 +310,11 @@ main {
     z-index: 50;
 }
 
-.mv_contents_wrapper h1{
+.mv_contents_wrapper h1 {
     position: relative;
     width: 100%;
-    font-family:'Noto Serif JP', serif;;
+    font-family: 'Noto Serif JP', serif;
+    ;
     font-style: normal;
     font-weight: 400;
     font-size: 3.2rem;
@@ -316,7 +323,7 @@ main {
     color: #FFFFFF;
 }
 
-.mv_contents_wrapper a{
+.mv_contents_wrapper a {
     position: relative;
     background-color: #FFFFFF;
     color: #000000;
@@ -329,6 +336,7 @@ main {
     font-weight: 700;
     line-height: 2rem;
 }
+
 
 /*-----------------------------------------------
 活動内容
@@ -351,6 +359,8 @@ main {
 #activity .contents p {
     color: rgb(0, 0, 0);
 }
+
+
 /*-----------------------------------------------
 歴史
 -----------------------------------------------*/
@@ -362,7 +372,7 @@ main {
 }
 
 #history .container {
-	flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 #history .contents h2,
@@ -452,8 +462,6 @@ main {
 }
 
 
-
-
 /* ページネーションのサイズと色 */
 
 .swiper-pagination-bullet {
@@ -461,9 +469,11 @@ main {
     height: 14px;
     width: 14px;
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
     position: relative;
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::before {
     content: '';
     display: block;
@@ -475,6 +485,7 @@ main {
     top: -5px;
     left: -5px;
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::after {
     content: '';
     display: block;
@@ -486,9 +497,11 @@ main {
     top: -3px;
     left: -3px;
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 12px;
 }
+
 .swiper-pagination {
     position: relative !important;
 }
@@ -525,8 +538,8 @@ main {
 }
 
 #place .message {
-	padding-top: 30px;
-	margin-bottom: 50px;
+    padding-top: 30px;
+    margin-bottom: 50px;
 }
 
 .place__message p {
@@ -600,6 +613,7 @@ main {
 /*-----------------------------------------------
 お問い合わせ
 -----------------------------------------------*/
+
 #contact {
     position: relative;
     background-position: center;
@@ -627,7 +641,7 @@ main {
 }
 
 #contact .title p span {
-	display: inline-block;
+    display: inline-block;
     border-top: #3A5199 solid 2px;
     padding-top: 5px;
     margin-top: 5px;
@@ -653,20 +667,22 @@ main {
     color: rgb(139, 139, 139);
 }
 
+
 /* お問い合わせフォーム */
+
 form {
     width: auto;
     background: rgb(255, 255, 255);
-	border-radius: 20px;
-	box-shadow: 0 0 10px rgb(0 0 0 / 16%);
-	padding: 40px 25px;
-	margin: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    padding: 40px 25px;
+    margin: 20px 10px;
 }
 
 .form_control {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .form_control label {
@@ -688,7 +704,7 @@ form {
 
 .form_control .badge p {
     width: fit-content;
-	background: #3A5199;
+    background: #3A5199;
     color: rgb(255 255 255);
     border-radius: 3px;
     padding: 1px 10px;
@@ -705,16 +721,18 @@ form {
     margin-bottom: 10px;
 }
 
+
 /* ボタン */
+
 #contact .button {
     display: flex;
     width: 170px;
-	background: rgb(58, 81, 153);
+    background: rgb(58, 81, 153);
     border-radius: 28px;
     color: rgb(255 255 255);
     cursor: pointer;
     padding: 15px 9px 15px 49px;
-	margin: 0 auto;
+    margin: 0 auto;
     transition: .3s;
 }
 
@@ -723,16 +741,19 @@ form {
 }
 
 #contact .button div {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 #contact .button span {
-	margin-left: auto;
+    margin-left: auto;
 }
+
+
 /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
-.footer_wrapper{
+
+.footer_wrapper {
     width: 100%;
     height: 5.6rem;
     display: flex;
@@ -741,7 +762,7 @@ form {
     background-color: #000000;
 }
 
-.footer_wrapper p{
+.footer_wrapper p {
     font-family: 'Noto Sans JP';
     font-style: normal;
     font-weight: 400;
@@ -749,6 +770,7 @@ form {
     line-height: 17px;
     color: #FFFFFF;
 }
+
 
 /*----------------------------------------------------------------------------------------------
 PC表示
@@ -780,11 +802,10 @@ PC表示
     .header_hamburger-menu {
         display: none;
     }
-
     .header_wrapper {
-        max-width: calc(1080px + 2rem); 
+        max-width: calc(1080px + 2rem);
         height: 7rem;
-        justify-content:space-between;
+        justify-content: space-between;
         padding: 0 2rem;
         margin: 0 auto;
     }
@@ -847,11 +868,10 @@ PC表示
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
-    .mv_sp_img{
+    .mv_sp_img {
         display: none;
     }
-
-    .mv_pc_img{
+    .mv_pc_img {
         display: inline;
         width: 100%;
         height: calc(100vh - 10rem);
@@ -860,24 +880,20 @@ PC表示
         top: 0;
         z-index: 40;
     }
-
-    .mv_contents_wrapper{
-        max-width: calc(1080px + 2rem); 
+    .mv_contents_wrapper {
+        max-width: calc(1080px + 2rem);
         top: 26.5rem;
         margin: 0 auto;
         padding: 0 2rem;
     }
-
-    .mv_contents_wrapper h1{
+    .mv_contents_wrapper h1 {
         font-size: 5.0rem;
         line-height: 7.2rem;
     }
-
-    .mv_contents_wrapper a{
+    .mv_contents_wrapper a {
         font-size: 1.6rem;
         line-height: 1.1;
     }
-
     /*-----------------------------------------------
     活動内容
     -----------------------------------------------*/
@@ -913,6 +929,9 @@ PC表示
         width: 653px;
         height: 100%;
         text-align: center;
+    }
+    #gallery.gallery_button_pc_only {
+        display: block;
     }
     /*-----------------------------------------------
     活動場所
@@ -978,7 +997,8 @@ PC表示
     }
     #place .place_boxies {
         display: flex;
-        font-family: 'Montserrat', sans-serif;;
+        font-family: 'Montserrat', sans-serif;
+        ;
         flex-wrap: wrap;
         font-style: normal;
         font-weight: 700;
@@ -993,9 +1013,9 @@ PC表示
         flex-shrink: 0;
         width: 214px;
     }
-    #place .place_box1 ,
-    .place_box2 ,
-    .place_box3  {
+    #place .place_box1,
+    .place_box2,
+    .place_box3 {
         margin-right: 10px;
         transition: .5s all;
     }

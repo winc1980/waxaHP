@@ -933,6 +933,12 @@ PC表示
     #gallery .gallery_button_pc_only {
         display: block;
     }
+    .swiper-button-prev {
+        top: 36%;
+    }
+    .swiper-button-next {
+        top: 36%;
+    }
     /*-----------------------------------------------
     活動場所
     -----------------------------------------------*/

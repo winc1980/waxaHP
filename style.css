@@ -403,19 +403,18 @@ Information
     border-collapse: collapse;
     width: 95%;
     height: 100%;
-    text-align:left;
+    text-align:left;/*左揃え*/
 }
-
+/* 棒線を表示する */
 #information .contents table tr {
     border-top: #eceef3 solid 1px;
     margin-top: 20px;
 }
+/* 一番下棒線を表示 */
 #information .contents table tr:last-child {
     border-bottom: #eceef3 solid 1px;
 }
-/* #information .contents table tr th {
-    padding-right: 30px;
-} */
+/* informationの行の間隔 */
 #information .contents table tr td {
     padding-top: 20px;
     padding-bottom: 20px;

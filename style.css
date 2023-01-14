@@ -414,6 +414,11 @@ Information
 #information .contents table tr:last-child {
     border-bottom: #eceef3 solid 1px;
 }
+
+#information .contents table th {
+    padding-left: 1.4rem;
+}
+
 /* informationの行の間隔 */
 #information .contents table tr td {
     padding-top: 20px;
@@ -1006,14 +1011,16 @@ PC表示
     }
     #information table th {
         border-top: 1px solid white;
+        font-weight: 700;
+        font-size: 1.4rem;
     }
 
 
     #information table td {
         padding: 23px;
-        padding-left: 150px;
-        padding-right: 180px;
         border-top: 1px solid white;
+        font-weight: 400;
+        font-size: 1.4rem;
 
     }
     

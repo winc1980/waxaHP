@@ -362,38 +362,38 @@ main {
 
 
 /*-----------------------------------------------
-歴史
+Information
 -----------------------------------------------*/
 
-#history {
+#information {
     width: 100%;
     background: rgb(0, 0, 0);
     padding: 60px 0;
 }
 
-#history .container {
+#information .container {
     flex-wrap: wrap-reverse;
 }
 
-#history .contents h2,
-#history .contents p {
+#information .contents h2,
+#information .contents p, table {
     color: rgb(255, 255, 255);
 }
 
-#history .images {
+#information .images {
     display: flex;
     justify-content: center;
     grid-gap: 10px;
     margin: 0 auto;
 }
 
-#history .images div {
+#information .images div {
     width: 180px;
     height: 390px;
     background: rgb(224, 150, 150);
 }
 
-#history .images div img {
+#information .images div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -919,8 +919,69 @@ PC表示
         max-width: 100%;
     }
     /*-----------------------------------------------
-    歴史
+    Information
     -----------------------------------------------*/
+    #information {
+        width: 100%;
+        background: rgb(0, 0, 0);
+        padding: 60px 0;
+    }
+    
+    #information .container {
+        flex-wrap: wrap-reverse;
+    }
+    
+    #information .contents h2,
+    #information .contents p, table {
+        color: rgb(255, 255, 255);
+    }
+
+    table {
+        border-collapse: collapse;
+        width:100%;
+    }
+
+    table :last-child{
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    #information table tr {
+
+    }
+    #information table th {
+        border-top: 1px solid white;
+    }
+
+
+    #information table td {
+        padding: 23px;
+        padding-left: 150px;
+        padding-right: 180px;
+        border-top: 1px solid white;
+
+    }
+    
+    
+    #information .images {
+        display: flex;
+        justify-content: center;
+        grid-gap: 10px;
+        margin: 0 auto;
+    }
+    
+    #information .images div {
+        width: 180px;
+        height: 390px;
+        background: rgb(224, 150, 150);
+    }
+    
+    #information .images div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+
     /*-----------------------------------------------
     活動風景
     -----------------------------------------------*/

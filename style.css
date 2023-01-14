@@ -507,6 +507,42 @@ main {
 }
 
 
+/* 幅・高さを指定 */
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+}
+
+
+/* 矢印を消す、画像に変更 */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+
+/* 前に戻る画像パス */
+
+.swiper-button-prev:after {
+    background-image: url(src/page-next.png);
+}
+
+
+/* 次に進む画像パス */
+
+.swiper-button-next:after {
+    background-image: url(src/page-prev.png);
+}
+
+
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/

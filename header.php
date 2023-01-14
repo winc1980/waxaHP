@@ -7,6 +7,7 @@
         <title>早稲田大学天文同好会WAXA</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="<?php echo get_theme_file_uri('src/favicon.ico'); ?>">
         <!-- Google Fonts 'Montserrat' -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- Google Fonts 'Noto+Serif' -->

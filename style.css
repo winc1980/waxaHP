@@ -534,6 +534,14 @@ main {
     background-image: url(src/page-next.png);
 }
 
+.swiper-button-next {
+    right: 15px;
+}
+
+.swiper-button-prev {
+    left: 15px;
+}
+
 
 /*-----------------------------------------------
 活動場所

@@ -51,7 +51,7 @@
                             <a href="#activity">活動内容</a>
                         </li>
                         <li>
-                            <a href="#history">歴史</a>
+                            <a href="#information">情報</a>
                         </li>
                         <li>
                             <a href="#place">活動場所</a>
@@ -78,7 +78,7 @@
                             <label for="header_menu-btn-check" onclick="location.href='#activity'">活動内容</label>
                         </li>
                         <li>
-                            <label for="header_menu-btn-check" onclick="location.href='#history'">歴史</label>
+                            <label for="header_menu-btn-check" onclick="location.href='#information'">情報</label>
                         </li>
                         <li>
                             <label for="header_menu-btn-check" onclick="location.href='#place'">活動場所</label>

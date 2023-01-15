@@ -35,8 +35,8 @@
         </section>
         <!-- 活動内容ここまで -->
 
-        <!-- 歴史ここから -->
-        <section id="history">
+        <!-- Infomationここから -->
+        <section id="information">
             <div class="container">
                 <div class="row">
                     <div class="images">
@@ -46,19 +46,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="contents">
+                    <div class="contents fade">
                         <div class="title">
-                            <h2>History</h2>
-                            <p>歴史</p>
+                            <h2 style="margin: 0">Information</h2>
+                            <p>サークル情報</p>
                         </div>
                         <div class="message">
-                            <p><?php echo get_post_meta( 1, 'history_text', true ); ?></p>
+                        <table>
+                            <tr>
+                                <th>人数</th><td>150人以上</td>
+                            </tr>
+                            <tr>
+                                <th>他大学</th><td>参加可能</td>
+                            </tr>
+                            <tr>
+                                <th>設立</th><td>1960年</td>
+                            </tr>
+                            <tr>
+                                <th>年会費</th><td>2,500円</td>
+                            </tr>
+                        </table>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- 歴史ここまで -->
+        <!-- Infomationここまで -->
 
         <!-- 活動風景ここから -->
         <section id="gallery">

@@ -6,7 +6,7 @@ function meta_box() {
         'my_activity_box',
         'dashboard',
         'normal',
-        'default',
+        'default'
     );
     add_meta_box(
         'my_history_box',
@@ -14,7 +14,7 @@ function meta_box() {
         'my_history_box',
         'dashboard',
         'normal',
-        'default',
+        'default'
     );
     add_meta_box(
         'my_sns_box',

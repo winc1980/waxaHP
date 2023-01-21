@@ -96,8 +96,10 @@
                             get_theme_file_uri('src/slider1.png'),
                             get_theme_file_uri('src/slider2.png'),
                             get_theme_file_uri('src/slider3.png'),
-                            get_theme_file_uri('src/slider4.png'),
                             get_theme_file_uri('src/slider5.png'),
+                            get_theme_file_uri('src/slider6.png'),
+                            get_theme_file_uri('src/slider1.png'),
+                            get_theme_file_uri('src/slider3.png'),
                             get_theme_file_uri('src/slider6.png'),
                         );
                         foreach ( $slide_images as $path ):

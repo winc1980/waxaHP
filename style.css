@@ -248,6 +248,10 @@ img {
     line-height: 2.3rem;
 }
 
+.header_menu-content ul li label:hover {   
+    color: #3A5199;
+}    
+
 .header_menu-content ul li a::before {
     content: "";
     width: 0.7rem;

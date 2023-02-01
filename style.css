@@ -248,6 +248,10 @@ img {
     line-height: 2.3rem;
 }
 
+.header_menu-content ul li label:hover {   
+    color: #3A5199;
+}    
+
 .header_menu-content ul li a::before {
     content: "";
     width: 0.7rem;
@@ -323,11 +327,17 @@ main {
     color: #FFFFFF;
 }
 
+.mv_contents_wrapper a:hover{
+    transform: scale(1.05);
+    transition: .5s all;
+}
+
 .mv_contents_wrapper a {
     position: relative;
+    display: inline-block;
     background-color: #FFFFFF;
     color: #000000;
-    padding: 1.1rem 2rem;
+    padding: 1.1rem 3.3rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-size: 1.4rem;
@@ -335,8 +345,8 @@ main {
     font-style: normal;
     font-weight: 700;
     line-height: 2rem;
+    transition: .5s all;
 }
-
 
 /*-----------------------------------------------
 活動内容
@@ -926,6 +936,28 @@ PC表示
         left: 107.3rem;
         top: 1.3rem;
     }
+
+    .header_menu_hover:hover{
+        color: #3A5199;
+    }
+    
+    .header_menu_sns_transform{
+        transition: .5s all;
+    }
+
+    .header_menu_sns_transform:hover{
+        transform: scale(1.2);
+        transition: .5s all;
+    }
+
+    .header_menu_btn_transform{
+        transition: .5s all;
+    }
+    
+    .header_menu_btn_transform:hover{
+        transform: scale(1.05);
+        transition: .5s all;
+    }
     /*-----------------------------------------------
     メインビジュアル
     -----------------------------------------------*/
@@ -953,6 +985,7 @@ PC表示
     }
     .mv_contents_wrapper a {
         font-size: 1.6rem;
+        padding: 1.1rem 4.6rem;
         line-height: 1.1;
     }
     /*-----------------------------------------------

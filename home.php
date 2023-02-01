@@ -96,8 +96,10 @@
                             get_theme_file_uri('src/slider1.png'),
                             get_theme_file_uri('src/slider2.png'),
                             get_theme_file_uri('src/slider3.png'),
-                            get_theme_file_uri('src/slider4.png'),
                             get_theme_file_uri('src/slider5.png'),
+                            get_theme_file_uri('src/slider6.png'),
+                            get_theme_file_uri('src/slider1.png'),
+                            get_theme_file_uri('src/slider3.png'),
                             get_theme_file_uri('src/slider6.png'),
                         );
                         foreach ( $slide_images as $path ):
@@ -172,11 +174,11 @@
                         <p>体験・入会は、WAXAの公式<a href="<?php echo 'https://www.instagram.com/' . get_post_meta( 1, 'instagram_id', true ); ?>">Instagram</a>もしくは公式<a href="<?php echo 'https://twitter.com/' . get_post_meta( 1, 'twitter_id', true ); ?>">Twitter</a>に、「体験したい」「入会したい」という旨のメッセージをDMで送っていただくか、下記フォームよりお問い合わせください。</p>
                     </div>
 
-                    <form>
+                    <form name="contact" action="" method="post">
                         <div class="form_control" style="margin-bottom:30px;">
                             <label>お名前</label>
                             <div class="badge"><p>必須</p></div>
-                            <input class="input_form" type="text" name="name" placeholder="お名前を入力してください">
+                            <input class="input_form" type="text" name="_name" placeholder="お名前を入力してください">
                         </div>
                         <div class="form_control" style="margin-bottom:30px;">
                             <label>メールアドレス</label>
@@ -203,8 +205,10 @@
                         </div>
                         <div class="form_control">
                             <label style="flex:6;">質問・その他</label>
-                            <textarea class="input_form" name="contents" rows="5" placeholder="質問や気になる点がありましたら、お気軽にお問い合わせください。"></textarea>
+                            <textarea class="input_form" name="body" rows="5" placeholder="質問や気になる点がありましたら、お気軽にお問い合わせください。"></textarea>
                         </div>
+                        <input type="hidden" name="submit_type" value="contact">
+                        <?php wp_nonce_field( 'sDio33kls673df', 'nonce' ); ?>
                     </form>
                 </div>
             </div>
@@ -214,6 +218,11 @@
                     <span class="material-symbols-outlined">chevron_right</span>
                 </div>
             </div>
+            <script>
+                document.querySelector("div.button").addEventListener('click', function() {
+                    document.contact.submit();
+                });
+            </script>
         </section>
         <!-- お問い合わせここまで -->
     </main>

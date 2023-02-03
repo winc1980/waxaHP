@@ -30,8 +30,10 @@
             }
         </style>
     </head>
-
+    
+    <NOSCRIPT>
     <body>
+    </NOSCRIPT>
     <div id="page">
         <!-- ヘッダーここから -->
         <header id="header">

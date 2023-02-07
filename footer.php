@@ -7,7 +7,7 @@
                         myYear = myDate.getFullYear();
                         document.write(myYear);
                     </script>
-                    &copy;: 天文同好会WAXA
+                    : 早稲田大学天文同好会WAXA
                 </p>
             </div>
         </footer>

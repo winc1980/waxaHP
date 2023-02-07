@@ -83,7 +83,7 @@ function my_information_box() {
         </div>
         <div class="input-text-wrap">
             <label for="input2">設立年</label>
-            <input type="text" id="input2" name="establis_year" value="<?php echo get_post_meta( 1, 'establis_year', true ); ?>" placeholder="">
+            <input type="text" id="input2" name="establish_year" value="<?php echo get_post_meta( 1, 'establish_year', true ); ?>" placeholder="">
         </div>
         <div class="input-text-wrap">
             <label for="input3">年会費</label>
@@ -140,7 +140,6 @@ function my_sendmail( $subject, $message ) {
 
     // 無害化
     $subject = sanitize_text_field( $subject );
-    $message = sanitize_text_field( $message );
 
     if ( $site_name ) {
         $headers = "From: {$site_name} <{$admin_email}>\r\n";
@@ -152,39 +151,50 @@ function my_sendmail( $subject, $message ) {
     return true;
 }
 
+// メール送信完了アラート
+if ( isset( $_GET['t'] ) && $_GET['t'] === 'sended' ) {
+    echo '<script>alert("メール送信が完了しました。");</script>';
+}
+
 add_action( 'after_setup_theme', function() {
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'sns' ) {
         update_post_meta( 1, 'instagram_id', $_POST['instagram_id'] );
         update_post_meta( 1, 'twitter_id', $_POST['twitter_id'] );
     }
+    // 活動内容更新
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'activity' ) {
         update_post_meta( 1, 'activity_text', $_POST['activity_text'] );
     }
+    // インフォーメーション更新
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'information' ) {
-        update_post_meta( 1, 'history_text', $_POST['history_text'] );
+        update_post_meta( 1, 'members',        $_POST['members']        );
+        update_post_meta( 1, 'other_univ',     $_POST['other_univ']     );
+        update_post_meta( 1, 'establish_year', $_POST['establish_year'] );
+        update_post_meta( 1, 'membership_fee', $_POST['membership_fee'] );
     }
     // お問い合わせフォーム
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'contact' ) {
         if( !wp_verify_nonce( $_POST['nonce'], 'sDio33kls673df' ) ) return;
-        $name = $_POST['_name'];
-        $email = $_POST['email'];
-        $request = $_POST['request'];
-        $body = $_POST['body'];
+        $name =    sanitize_text_field( $_POST['_name']   );
+        $email =   sanitize_text_field( $_POST['email']   );
+        $request = sanitize_text_field( $_POST['request'] );
+        $body =    sanitize_text_field( $_POST['body']    );
 
         $subject = "{$name} 様からお問い合わせがありました。";
 
         $message = "
-        {$name} 様からお問い合わせがありました。\r\n
-        ご要望：{$request}\r\n
-        メールアドレス：{$email}\r\n
-        \r\n
-        --------------メール本文--------------\r\n
+        {$name} 様からお問い合わせがありました。
+        ご要望：{$request}
+        メールアドレス：{$email}
+        
+        --------------メール本文--------------
         {$body}
         ";
 
         my_sendmail( $subject, $message );
 
-        echo "<script>alert('お問い合わせ内容を送信しました。');</script>";
+        wp_redirect( home_url('/?t=sended') );
+        exit;
     }
 });
 

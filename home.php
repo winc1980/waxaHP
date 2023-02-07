@@ -4,8 +4,8 @@
         <!-- メインビジュアルここから -->
         <section id="mv">
             <div class="mv_wrapper">
-                <img src="<?php echo get_theme_file_uri('src/main-visual-sp.png'); ?>" class="mv_sp_img" alt="">
-                <img src="<?php echo get_theme_file_uri('src/main-visual.png'); ?>" class="mv_pc_img" alt="">
+                <img src="<?php echo get_theme_file_uri('src/main-visual-sp.webp'); ?>" class="mv_sp_img" alt="">
+                <img src="<?php echo get_theme_file_uri('src/main-visual.webp'); ?>" class="mv_pc_img" alt="">
                 <div class="mv_contents_wrapper">
                     <h1>そうだ、<br>星を見に行こう。</h1>
                     <a href="#contact">本入会はこちら</a>
@@ -23,13 +23,13 @@
                             <h2>Activity</h2>
                             <p>活動内容</p>
                         </div>
-                        <div class="message">
+                        <div class="message fade">
                             <p><?php echo get_post_meta( 1, 'activity_text', true ); ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="activity__figure row">
-                    <img src="<?php echo get_theme_file_uri('src/activity.jpg'); ?>" alt="images" />
+                <div class="activity__figure row fade">
+                    <img src="<?php echo get_theme_file_uri('src/activity.png'); ?>" alt="images" />
                 </div>
             </div>
         </section>
@@ -38,7 +38,7 @@
         <!-- Infomationここから -->
         <section id="information">
             <div class="container">
-                <div class="row">
+                <div class="row fade">
                     <div class="images">
                         <div><img src="<?php echo get_theme_file_uri('src/history-01.png'); ?>" alt="" /></div>
                         <div><img src="<?php echo get_theme_file_uri('src/history-02.png'); ?>" alt="" /></div>
@@ -54,16 +54,16 @@
                         <div class="message">
                         <table>
                             <tr>
-                                <th>人数</th><td>150人以上</td>
+                                <th>人数</th><td><?php echo get_post_meta( 1, 'members', true ); ?></td>
                             </tr>
                             <tr>
-                                <th>他大学</th><td>参加可能</td>
+                                <th>他大学</th><td><?php echo get_post_meta( 1, 'other_univ', true ); ?></td>
                             </tr>
                             <tr>
-                                <th>設立</th><td>1960年</td>
+                                <th>設立</th><td><?php echo get_post_meta( 1, 'establish_year', true ); ?></td>
                             </tr>
                             <tr>
-                                <th>年会費</th><td>2,500円</td>
+                                <th>年会費</th><td><?php echo get_post_meta( 1, 'membership_fee', true ); ?></td>
                             </tr>
                         </table>
                         </div>
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="swiper-parent">
+            <div class="swiper-parent fade">
                 <!-- Swiper START -->
                 <div class="swiper-container">
                     <!-- メイン表示部分 -->
@@ -94,7 +94,7 @@
                         <?php
                         $slide_images = array(
                             get_theme_file_uri('src/slider1.png'),
-                            get_theme_file_uri('src/slider2.png'),
+                            get_theme_file_uri('src/activity.png'),
                             get_theme_file_uri('src/slider3.png'),
                             get_theme_file_uri('src/slider5.png'),
                             get_theme_file_uri('src/slider6.png'),
@@ -137,13 +137,13 @@
                             <div class="place_fields">
                                 <div class="place_boxies">
                                     <div class="place_box place_box1">
-                                        <a href="https://www.waseda.jp/inst/student/facility/studentcenter">学生会館について</a>
+                                        <a href="https://www.waseda.jp/inst/student/facility/studentcenter" target="_blank" rel="noopener">学生会館について</a>
                                     </div>
                                     <div class="place_box place_box2">
-                                        <a href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf">キャンパス間連絡バス</a>
+                                        <a href="https://www.waseda.jp/fsci/assets/uploads/2022/03/2022nishiwaseda-shuttle-bus-timetable.pdf" target="_blank" rel="noopener">キャンパス間連絡バス</a>
                                     </div>
                                     <div class="place_box place_box3">
-                                        <a href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm">学生会館へのアクセス方法</a>
+                                        <a href="https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm" target="_blank" rel="noopener">学生会館へのアクセス方法</a>
                                     </div>
                                 </div>
                                 <p>
@@ -194,12 +194,8 @@
                                     <label for="radio1">入会したい</label>
                                 </div>
                                 <div class="form_check_radio">
-                                    <input type="radio" id="radio2" name="request" value="体験したい">
-                                    <label for="radio2">体験したい</label>
-                                </div>
-                                <div class="form_check_radio">
-                                    <input type="radio" id="radio3" name="request" value="その他">
-                                    <label for="radio3">その他</label>
+                                    <input type="radio" id="radio2" name="request" value="その他">
+                                    <label for="radio2">その他</label>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +211,7 @@
             <div class="container">
                 <div class="button">
                     <div>送信する</div>
-                    <span class="material-symbols-outlined">chevron_right</span>
+                    <span><svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="m18.75 36-2.15-2.15 9.9-9.9-9.9-9.9 2.15-2.15L30.8 23.95Z"/></svg></span>
                 </div>
             </div>
             <script>

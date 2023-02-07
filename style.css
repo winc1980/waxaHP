@@ -738,6 +738,13 @@ Information
     color: rgb(139, 139, 139);
 }
 
+/* 送信ボタン chevron-arrow */
+#contact .button span svg{
+    display: block;
+    fill: #fff;
+    width: 28px;
+    height: 28px;
+}
 
 /* お問い合わせフォーム */
 

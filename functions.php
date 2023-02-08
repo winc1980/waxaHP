@@ -24,6 +24,14 @@ function meta_box() {
         'normal',
         'default'
     );
+    add_meta_box(
+        'my_gallery_box',
+        'ギャラリーの設定',
+        'my_gallery_box',
+        'dashboard',
+        'normal',
+        'default'
+    );
 }
 add_action( 'admin_menu', 'meta_box' );
 
@@ -131,6 +139,64 @@ function my_sns_box() {
 <?php
 }
 
+
+function my_gallery_box() {
+?>
+    <style>
+        #galleries {
+            height: 350px;
+            overflow-y: scroll;
+        }
+        img.gallery_img {
+            width: 70%;
+            height: auto;
+        }
+        div.imagebox {
+            width: 75%;
+            margin: 0 auto;
+        }
+        #gallerybox .submit {
+            display: flex;
+            width: 100%;
+            justify-content: end;
+        }
+    </style>
+
+    <form id="gallerybox" action="" method="post">
+        <div id="galleries">
+            <?php
+            $get_galleries =  maybe_unserialize( get_post_meta( 1, 'galleries', true ) ) ?: [];
+            $args = array(
+                'post_type' => 'attachment',
+                'post_mime_type' => 'image',
+                'post_status' => 'any',
+                'posts_per_page' => -1
+                );
+            $attachments = get_posts( $args );
+            foreach ( $attachments as $i => $data ) {
+                // $data->ID, $data-guid
+                ?>
+                <div class="imagebox">
+                    <input type="checkbox" id="<?php echo $i ?>" name="<?php echo "galleries[]" ?>"
+                     value="<?php echo $data->ID ?>" <?php echo in_array( $data->ID, $get_galleries, false ) ? 'checked': '' ?>>
+                    <label for="<?php echo $i ?>">
+                        <img class="gallery_img" src="<?php echo $data->guid ?>">
+                    </label>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+        <div class="submit">
+            <input type="hidden" name="submit_type" value="gallery">
+            <input type="submit" class="button button-primary" value="保存する">
+        </div>
+    </form>
+
+<?php
+}
+
+
 // メールを送信する
 function my_sendmail( $subject, $message ) {
 
@@ -171,6 +237,11 @@ add_action( 'after_setup_theme', function() {
         update_post_meta( 1, 'other_univ',     $_POST['other_univ']     );
         update_post_meta( 1, 'establish_year', $_POST['establish_year'] );
         update_post_meta( 1, 'membership_fee', $_POST['membership_fee'] );
+    }
+    // ギャラリー更新
+    if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'gallery' ) {
+        if ( isset( $_POST['galleries'] ) )
+            update_post_meta( 1, 'galleries', maybe_serialize( $_POST['galleries'] ) );
     }
     // お問い合わせフォーム
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'contact' ) {

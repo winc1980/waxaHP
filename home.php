@@ -92,19 +92,11 @@
                     <div class="swiper-wrapper">
                         <!-- 各スライド -->
                         <?php
-                        $slide_images = array(
-                            get_theme_file_uri('src/slider1.png'),
-                            get_theme_file_uri('src/activity.png'),
-                            get_theme_file_uri('src/slider3.png'),
-                            get_theme_file_uri('src/slider5.png'),
-                            get_theme_file_uri('src/slider6.png'),
-                            get_theme_file_uri('src/slider1.png'),
-                            get_theme_file_uri('src/slider3.png'),
-                            get_theme_file_uri('src/slider6.png'),
-                        );
-                        foreach ( $slide_images as $path ):
+                        $get_galleries =  maybe_unserialize( get_post_meta( 1, 'galleries', true ) ) ?: [];
+
+                        foreach ( $get_galleries as $attachmentId ):
                         ?>
-                        <div class="swiper-slide"><img src="<?php echo $path; ?>" alt="スライドショー"></div>
+                        <div class="swiper-slide"><img src="<?php echo wp_get_attachment_image_src( $attachmentId, 'full' )[0] ?>" alt="スライドショー"></div>
                         <?php endforeach; ?>
                     </div>
 

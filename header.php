@@ -57,22 +57,22 @@
                 <div class="header_menu-content-pc">
                     <ul>
                         <li>
-                            <a href="#activity">活動内容</a>
+                            <a href="#activity" class="header_menu_hover">活動内容</a>
                         </li>
                         <li>
-                            <a href="#information">情報</a>
+                            <a href="#information" class="header_menu_hover">情報</a>
                         </li>
                         <li>
-                            <a href="#place">活動場所</a>
+                            <a href="#place" class="header_menu_hover">活動場所</a>
                         </li>
                         <li>
-                            <a href="<?php echo 'https://www.instagram.com/' . get_post_meta( 1, 'instagram_id', true ); ?>"><img src="<?php echo get_theme_file_uri('src/instagram-logo.svg'); ?>" alt="instagram link"></a>
+                            <a href="https://www.instagram.com/waxa_tenmon/"><img src="<?php echo get_theme_file_uri('src/instagram-logo.svg'); ?>" class="header_menu_sns_transform" alt="instagram link"></a>
                         </li>
                         <li>
-                            <a href="<?php echo 'https://twitter.com/' . get_post_meta( 1, 'twitter_id', true ); ?>"><img src="<?php echo get_theme_file_uri('src/twitter-logo.svg'); ?>" alt="Twitter link"></a>
+                            <a href="https://twitter.com/waxa_souten"><img src="<?php echo get_theme_file_uri('src/twitter-logo.svg'); ?>" class="header_menu_sns_transform" alt="Twitter link"></a>
                         </li>
                         <li>
-                            <a href="#contact" id="header_application-btn">本入会はこちら</a>
+                            <a href="#contact" id="header_application-btn" class="header_menu_btn_transform">入会はこちら</a>
                         </li>
                     </ul>
                 </div>

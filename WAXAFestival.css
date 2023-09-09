@@ -1,0 +1,808 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+    margin: 0;
+}
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+
+}
+body{
+    margin:0;
+}
+h2{
+    margin:0;
+}
+
+@media (min-width:376px){
+    body{
+        background-color: #000000;
+        background-image: url(images/星空top.png);
+        background-size:100%;
+        z-index:1;
+        display:flex;
+    }
+    .leftcontents{
+
+        width:auto;
+        background-color: #0976F5;
+        z-index: 2;
+    
+    }
+    .container{
+    
+    
+        max-width:375px;
+        margin-left:auto;
+        margin-right:auto;
+        overflow: hidden;
+    
+    }
+/*   .video0{
+        position:absolute;
+        z-index:2;
+        width:900px;
+        display:block;
+
+    }
+    .video1{
+        display:relative;
+    }
+*/
+}
+
+
+.leftcontents{
+    width:auto;
+    display:none;
+
+}
+.container{
+    
+    
+    max-width:375px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow: hidden;
+
+}
+
+#header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: #000000;
+    margin:0;
+}
+
+.header_wrapper {
+    display: flex;
+    height: 6rem;
+    position: sticky;
+    z-index: 90;
+    background-color: #000000;
+    margin:0;
+}
+
+.header_logoandtitle {
+    display: flex;
+}
+
+#header_waxa_logo {
+    width: 3.9rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.header_wrapper h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-left: 0.9rem;
+    padding-top: 0.9rem;
+    color: #FFFFFF;
+}
+
+.header_wrapper span {
+    font-weight: 100;
+}
+
+.header_menu-content-pc {
+    display: none;
+}
+
+.header_menu-btn {
+    position: absolute;
+    z-index: 110;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 6rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_menu-btn span,
+.header_menu-btn span:before,
+.header_menu-btn span:after {
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 1.9rem;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.header_menu-btn span:before {
+    bottom: 0.7rem;
+}
+
+.header_menu-btn span:after {
+    top: 0.7rem;
+}
+
+#header_menu-btn-check:checked~.header_menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#header_menu-btn-check:checked~.header_menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#header_menu-btn-check:checked~.header_menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#header_menu-btn-check {
+    display: none;
+}
+
+.header_menu-content {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 100%;
+    z-index: 80;
+    background-color: #000000;
+    transition: all 0.5s;
+    padding-bottom: 1.7rem;
+    margin:0;
+}
+
+.header_menu-content ul {
+    display: list-item;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header_menu-content ul li {
+    text-align: center;
+    list-style: none;
+}
+
+.header_menu-content ul li label {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.3rem;
+}
+
+.header_menu-content ul li label:hover {   
+    color: #3A5199;
+}    
+
+.header_menu-content ul li a::before {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    border-top: solid 0.2rem #ffffff;
+    border-right: solid 0.2rem #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 1.1rem;
+    top: 1.6rem;
+}
+
+#header_menu-btn-check:checked~.header_menu-content {
+    bottom: calc(100% - 32.9rem);
+    /*メニューを画面内へ*/
+}
+.backimg0{
+    display:none;
+}
+.video0{
+    display:none;
+}
+
+.section1{
+    position:relative;
+    display:flex;
+    height:580px;
+}
+.backimg1{
+    position:absolute;
+    width:100%;
+    height:580px;
+}
+.wasedade{
+    position:absolute;
+    font-size: 48px;
+    height:140px;
+    width:375px;
+    padding:90px 0px 0px 20px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+}
+.wasedasaikikaku{
+    position:absolute;
+    font-size:32px;
+    width:375px;
+    height:68px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:300px 0px 0px 80px;
+
+
+}
+.kikakunichizi{
+    position:absolute;
+    font-size:16px;
+    width:375px;
+    height:50px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:370px 0px 0px 140px;
+}
+.placetime{
+    position:absolute;
+    font-size:16px;
+    width:375px;
+    height:50px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:390px 0px 0px 76px;
+}
+.basyoha{
+    position:absolute;
+    font-size:13px;
+    width:375px;
+    height:50px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:420px 0px 0px 135px;
+}
+.kochiratop{
+/*    display:block;
+    position:absolute;
+    font-size:13px;
+    width:375px;
+    height:50px;
+    color:#0976F5;
+    font-family: 'Noto Serif JP', serif;
+    padding:432px 0px 0px 175px;
+*/  
+    position:relative;
+    display:block;
+    font-size:13px;
+    font-family: 'Noto Serif JP', serif;
+    color: #0976F5;
+    padding-top:11px;
+    margin:0px 150px 0px 0px;
+    z-index: 6;
+}
+.kochira{
+    width:375px;
+    height:400px;
+    padding-top:420px;
+    padding-left:175px;
+
+}
+.undertop{
+    position:absolute;
+    font-size:13px;
+    width:60px;
+    height:4px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:420px 0px 0px 123px;
+    
+
+}
+.atag{
+    display:block;
+    z-index: 8;
+}
+.box {
+    position:absolute;
+
+    width        : 40px;
+    height       : 16px;
+    background   : #ffffff;
+    margin:434px 0px 0px 175px;
+  }
+.seirikenha{
+    position:absolute;
+    font-size:13px;
+    width:375px;
+    height:50px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:442px 0px 0px 128px;
+}
+.kochirabottom{
+    display:block;
+    position:relative;
+    font-size:13px;
+    color:#0976F5;
+    padding-top:2px;
+    padding-left:6px;
+    margin:0px;
+    font-family: 'Noto Serif JP', serif;
+    z-index: 6;
+    margin:0px 150px 0px 0px;
+
+}
+.underbottom{
+    position:absolute;
+    font-size:13px;
+    width:375px;
+    height:4px;
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    padding:443px 0px 0px 123px;
+}
+
+.box2{
+    position:absolute;
+    width: 40px;
+    height: 16px;
+    background: #ffffff;
+    margin:456px 0px 0px 181px;
+  }
+.secion2{
+    background-color: #ffffff;
+}
+.planeta-shashin-back{
+    background-color: #ffffff;
+
+    background-image: url(images/IMG_5803.png);    /* 背景画像指定 */
+    background-repeat:  no-repeat;                              /* 背景の繰り返し設定 */ 
+    width: 375px;
+    height: 667px;         /* 背景の位置指定 */
+}
+
+.planeta-title{
+    font-size: 35px;
+    height: 49px;
+    width: 228px;
+    color: white;
+    font-weight: 700;
+    margin-left: 25px;
+    padding-top: 13%;
+}
+
+.planeta-taira{
+    display: flex;
+}
+.planeta-bou{
+    
+    width: 3px;
+    height: 33px;
+    transform: rotate(0deg);
+    flex-shrink: 0;
+    margin-left: 26px;
+    color: #ffffff;
+}
+.planeta-sub{
+    width: 112px;
+    height: 26.174px;
+    font-size: 16px;
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-top: 5px;
+    padding-top:43px;
+    margin-left: 18.29px;
+}
+
+
+.planeta-bun{
+    width: 327px;
+    height: 136.559px;
+    font-size: 14px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-left: 24px;
+    margin-bottom: 30px;
+    filter: drop-shadow(100%);
+    text-shadow: 2.5px 2.5px 2.5px #FFFFFF;
+}
+
+.planeta-shashin{
+    background-image: url(images/IMG_5802.png);    /* 背景画像指定 */
+    background-repeat:  no-repeat;                              /* 背景の繰り返し設定 */ 
+    width: 327px;
+    height: 285.56px;         /* 背景の位置指定 */
+    margin-left: 24px;
+}
+
+
+.planeta-shashin-second{
+    width: 164px;
+    height: 286px;
+    margin-left: 168px;
+}
+
+.section3{
+    background-color: #ffffff;
+    position:relative;
+    height:510px;
+    padding-left:24px;
+
+}
+.Simulated{
+    background-color: #ffffff;
+    position:relative;
+    width: 375px;
+    height: 50px;
+    font-size:25px;
+    font-weight:bold;
+    line-height:30px;
+}
+.mock{
+    display:flex;
+    margin-top:20px;
+    height:30px;
+}
+.linestand{
+    position:relative;
+    width: 3px;
+    height: 33px;
+    background: #3A5199;
+}
+.mocktest{
+    position:relative;
+    height: 25px;
+    font-size:16px;
+    padding-top:5px;
+    padding-left:8px;
+    font-family: "Noto Sans JP";
+
+}
+.mockexplain{
+    position:relative;
+    height: 50px;
+    padding-right: 24px;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing: 4px;
+    font-family: "Noto Sans JP";
+}
+.puzzle1{
+    position:absolute;
+    padding-top:160px;
+    padding-left:140px;
+
+}
+.puzzle2{
+    position:absolute;
+    padding-top:80px;
+    padding-left:20px;
+}
+#section41{
+    position:relative;
+    background-color: #ffffff;
+    height:2px;
+    margin:0;
+}
+#section61{
+    position:relative;
+    background-color: #ffffff;
+    height:50px;
+    margin:0;
+}
+.section4{
+    position:relative;
+    background-color: black;
+    height:250px;
+    margin:0;
+}
+.Tickets{
+    color:#ffffff;
+    position:relative;
+    height: 50px;
+    padding-top: 24px;
+    padding-left:24px;
+    font-size:35px;
+    font-weight:bold;
+    font-family: "Montserrat";
+    margin:0;
+
+
+}
+.About{
+    margin-top:20px;
+    display:flex;
+
+}
+.linestand2{
+    position:relative;
+    width: 3px;
+    height: 33px;
+    background: #3A5199;
+    margin-left:24px;
+
+}
+.Abouttickets{
+    position:relative;
+    height: 25px;
+    font-size:16px;
+    padding-left:8px;
+    padding-top:4px;
+    font-family: "Noto Sans JP";
+    color:#ffffff;
+    margin:0;
+
+
+
+}
+/*-----------------------------------------------
+活動風景
+-----------------------------------------------*/
+
+#gallery {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 60px 0;
+    position: relative;
+    margin: auto;
+}
+
+#gallery .gallery_container {
+    margin-bottom: 30px;
+}
+
+#gallery .gallery_title_h2 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+#gallery .gallery_title {
+    text-align: center;
+}
+
+#gallery .gallery_text {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#gallery p span {
+    display: inline-block;
+    border-top: #3A5199 solid 2px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#gallery .gallery_button_pc_only {
+    display: none;
+}
+
+
+/* 全体のスタイル */
+
+.swiper-wrapper {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* 全スライド共通スタイル */
+
+.swiper-slide {
+    color: #ffffff;
+    width: 78.93vw;
+    height: 296px;
+    text-align: center;
+    line-height: 110px;
+}
+
+
+/* ページネーションのサイズと色 */
+
+.swiper-pagination-bullet {
+    background-color: black;
+    height: 14px;
+    width: 14px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    position: relative;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: #FFFFFF solid 3px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 12px;
+}
+
+.swiper-pagination {
+    position: relative !important;
+}
+
+
+/* 幅・高さを指定 */
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-size: 50px 50px;
+}
+
+
+/* 前に戻る画像パス */
+
+.swiper-button-prev {
+    background-image: url(src/page-prev.png);
+}
+
+
+/* 次に進む画像パス */
+
+.swiper-button-next {
+    background-image: url(src/page-next.png);
+}
+
+.swiper-button-next {
+    right: 15px;
+}
+
+.swiper-button-prev {
+    left: 15px;
+}
+
+
+.section6{
+    position:relative;
+    height:1850px;
+
+
+}
+.backimg2{
+    position:absolute;
+    width:100%;
+
+
+}
+.Place{
+    position:absolute;
+    color:#ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 24px;
+    margin:0;
+    padding-left:24px;
+
+}
+.Togo{
+    position:absolute;
+    display:flex;
+}
+.linestand3{
+    position:absolute;
+    width: 3px;
+    height: 33px;
+    margin-top: 80px;
+    margin-left:24px;
+    background: #3A5199;
+
+}
+.Tenzibasho{
+    position:absolute;
+    height: 25px;
+    font-size:16px;
+    padding-top: 81px;
+    padding-left:40px;
+    font-family: "Noto Sans JP";
+    color:#ffffff;
+    margin:0;
+
+}
+.map1{
+    position:relative;
+    padding-top:140px;
+    padding-left:24px;
+
+}
+.map2{
+    position:relative;
+    padding-top:30px;
+    padding-left:24px;
+
+}
+
+.mapexplain{
+    position:absolute;
+    height: 50px;
+    padding-right:24px;
+    font-size:14px;
+    padding-top: 81px;
+    line-height: 24px;
+    padding-left:24px;
+    font-family: "Noto Sans JP";
+    color:#ffffff;
+    margin:0;
+
+}
+.footer_wrapper {
+    width: 100%;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.footer_wrapper p {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+
+

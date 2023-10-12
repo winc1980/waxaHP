@@ -716,13 +716,15 @@ h2{
 
 .section6{
     position:relative;
-    height:1850px;
+    height:2200px;
 
 
 }
 .backimg2{
     position:absolute;
     width:100%;
+    padding-top: 120px;
+    transform: scaleY(1.21);
 
 
 }
@@ -731,7 +733,7 @@ h2{
     color:#ffffff;
     font-size: 35px;
     font-weight: bold;
-    padding-top: 24px;
+    padding-top: 14px;
     margin:0;
     padding-left:24px;
 
@@ -762,14 +764,19 @@ h2{
 }
 .map1{
     position:relative;
-    padding-top:140px;
+    margin-top:190px;
     padding-left:24px;
+    width:100%;
+    transform:rotate(-90deg);
 
 }
 .map2{
     position:relative;
-    padding-top:30px;
+    margin-top:100px;
     padding-left:24px;
+    width:100%;
+    transform:rotate(-90deg);
+
 
 }
 

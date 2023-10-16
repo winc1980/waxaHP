@@ -8,7 +8,8 @@
                 <img src="<?php echo get_theme_file_uri('src/main-visual.webp'); ?>" class="mv_pc_img" alt="">
                 <div class="mv_contents_wrapper">
                     <h1>そうだ、<br>星を見に行こう。</h1>
-                    <a href="#contact">本入会はこちら</a>
+                    <a href="#contact">入会はこちら</a><br>
+                    <a href="wasesai2023.html" class="event_button">早稲祭企画はこちら</a>
                 </div>
             </div>
         </section>

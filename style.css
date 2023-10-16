@@ -337,6 +337,7 @@ main {
     display: inline-block;
     background-color: #FFFFFF;
     color: #000000;
+    margin: 2rem 0 0 0;
     padding: 1.1rem 3.3rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -346,6 +347,10 @@ main {
     font-weight: 700;
     line-height: 2rem;
     transition: .5s all;
+}
+
+.event_button{
+    background-color: #0057C7 !important;
 }
 
 /*-----------------------------------------------
